@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:text="@string/label_name"
+        style="@style/dialog_labels"/>
+
+    <EditText
+        android:id="@+id/edit_text_name"
+        android:inputType="text|textCapSentences"
+        style="@style/dialog_text_edit">
+
+        <requestFocus/>
+
+    </EditText>
+
+    <TextView
+        android:text="@string/label_author"
+        style="@style/dialog_labels"/>
+
+    <EditText
+        android:id="@+id/edit_text_author"
+        android:inputType="text|textCapWords"
+        style="@style/dialog_text_edit"/>
+
+    <TextView
+        android:text="@string/label_url"
+        style="@style/dialog_labels"/>
+
+    <EditText
+        android:id="@+id/edit_text_url"
+        android:inputType="textUri"
+        style="@style/dialog_text_edit"/>
+
+    <TextView
+        android:text="@string/label_tags"
+        style="@style/dialog_labels"/>
+
+    <EditText
+        android:id="@+id/edit_text_tags"
+        android:inputType="text"
+        style="@style/dialog_text_edit"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_node"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/label_node"
+            android:text="@string/label_node"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            style="@style/dialog_labels"/>
+
+        <EditText
+            android:id="@+id/edit_text_node"
+            android:layout_below="@id/label_node"
+            android:layout_toLeftOf="@id/button_node"
+            android:layout_toStartOf="@id/button_node"
+            android:inputType="none"
+            android:clickable="false"
+            android:focusable="false"
+            style="@style/dialog_text_edit"/>
+<!--        android:editable="false"-->
+<!--        android:textIsSelectable="false"-->
+
+        <ImageButton
+            android:id="@+id/button_node"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_node"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:background="@drawable/ic_tree" />
+
+    </RelativeLayout>
+
+    <CheckedTextView
+        android:id="@+id/check_box_favor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:gravity="end|center_vertical"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:text="@string/label_favorite"
+        android:checked="false"
+        style="@style/dialog_labels"/>
+
+</LinearLayout>

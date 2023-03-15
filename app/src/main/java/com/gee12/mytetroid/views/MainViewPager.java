@@ -11,16 +11,16 @@ public class MainViewPager extends ViewPager {
     public static int PAGE_MAIN = 0;
     public static int PAGE_FOUND = 1;
 
-    private boolean isPagindEnabled;
+    private boolean isSwipeEnabled;
 
     public MainViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
-        this.isPagindEnabled = true;
+        this.isSwipeEnabled = true;
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (this.isPagindEnabled) {
+        if (this.isSwipeEnabled) {
             return super.onTouchEvent(event);
         }
         return false;
@@ -28,7 +28,7 @@ public class MainViewPager extends ViewPager {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent event) {
-        if (this.isPagindEnabled) {
+        if (this.isSwipeEnabled) {
             return super.onInterceptTouchEvent(event);
         }
         return false;
@@ -39,7 +39,7 @@ public class MainViewPager extends ViewPager {
      * @param enabled
      */
     public void setPagingEnabled(boolean enabled) {
-        this.isPagindEnabled = enabled;
+        this.isSwipeEnabled = enabled;
     }
 
     /**
@@ -49,4 +49,5 @@ public class MainViewPager extends ViewPager {
     public void setCurrent(int pageIndex) {
         setCurrentItem(pageIndex, true);
     }
+
 }

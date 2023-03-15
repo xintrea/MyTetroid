@@ -3,30 +3,177 @@
     <string-array name="view_type_titles">
         <!--<item name="none"> </item>-->
         <item name="records_list">ВЕТКА</item>
-        <item name="record_text">ЗАПИСЬ</item>
+<!--        <item name="record_text">ЗАПИСЬ</item>-->
         <item name="recor_files">ФАЙЛЫ</item>
         <item name="tag_records">МЕТКА</item>
-        <item name="finded_records">ПОИСК ПО ЗАПИСЯМ</item>
+        <item name="finded_records"></item>
+        <!--<item name="finded_records">ПОИСК ПО ЗАПИСЯМ</item>-->
     </string-array>
     <string-array name="search_split_to_words">
         <item name="search_any_word">Поиск по каждому слову в запросе</item>
-        <item name="search_all_words">Запрос целиком</item>
+        <item name="search_all_words">По запросу целиком</item>
     </string-array>
     <string-array name="search_in_whole_words">
-        <item name="search_whole_word">Поиск по совпадению только целых слов</item>
+        <item name="search_whole_word">По целым словам</item>
         <item name="search_substring">По подстрокам</item>
     </string-array>
     <string-array name="search_in_cur_node">
         <item name="search_all_database">Поиск по всей базе</item>
-        <item name="search_cur_node">В текущей ветке</item>
+        <item>@string/global_search_in_cur_node</item>
+        <item name="global_search_in_spec_node">В указанной ветке</item>
     </string-array>
     <string-array name="found_types">
-        <item>Имя записи</item>
-        <item>Текст записи</item>
-        <item>Автор</item>
-        <item>Url</item>
-        <item>Файл</item>
-        <item>Метка</item>
-        <item>Ветка</item>
+        <item>имя записи</item>
+        <item>текст</item>
+        <item>автор</item>
+        <item>url</item>
+        <item>имя файла</item>
+        <item>метка</item>
+        <item>имя ветки</item>
+        <item>id ветки</item>
+        <item>id записи</item>
+        <item>id файла</item>
+    </string-array>
+
+    <string-array name="obj_storage">
+        <item>хранилище</item>
+        <item>Хранилище&#160;</item>
+        <item>хранилища</item>
+    </string-array>
+    <string-array name="obj_node">
+        <item>ветку</item>
+        <item>Ветка&#160;</item>
+        <item>ветки</item>
+    </string-array>
+    <string-array name="obj_node_fields">
+        <item>свойства ветки</item>
+        <item>Свойста ветки&#160;</item>
+        <item>свойств ветки</item>
+    </string-array>
+    <string-array name="obj_record">
+        <item>запись</item>
+        <item>Запись&#160;</item>
+        <item>записи</item>
+    </string-array>
+    <string-array name="obj_temp_record">
+        <item>временную запись</item>
+        <item>Временная запись&#160;</item>
+        <item>временной записи</item>
+    </string-array>
+    <string-array name="obj_record_fields">
+        <item>свойства записи</item>
+        <item>Свойста записи&#160;</item>
+        <item>свойств записи</item>
+    </string-array>
+    <string-array name="obj_record_dir">
+        <item>каталог записи</item>
+        <item>Каталог записи&#160;</item>
+        <item>каталога записи</item>
+    </string-array>
+    <string-array name="obj_tag">
+        <item>метка записи</item>
+        <item>Метка записи&#160;</item>
+        <item>метки записи</item>
+    </string-array>
+    <string-array name="obj_file">
+        <item>файл</item>
+        <item>Файл&#160;</item>
+        <item>файла</item>
+    </string-array>
+    <string-array name="obj_image">
+        <item>изображение</item>
+        <item>Изображение&#160;</item>
+        <item>изображения</item>
+    </string-array>
+    <string-array name="obj_file_fields">
+        <item>свойства файла</item>
+        <item>Свойства файла&#160;</item>
+        <item>свойств файла</item>
+    </string-array>
+
+    <string-array name="oper_set">
+        <item>установить</item>
+        <item>установлен(-а)</item>
+        <item>установки</item>
+    </string-array>
+    <string-array name="oper_load">
+        <item>загрузить</item>
+        <item>загружен(-а/о)</item>
+        <item>загрузки</item>
+    </string-array>
+    <string-array name="oper_create">
+        <item>создать</item>
+        <item>создан(-а)</item>
+        <item>создания</item>
+    </string-array>
+    <string-array name="oper_add">
+        <item>добавить</item>
+        <item>добавлен(-а)</item>
+        <item>добавления</item>
+    </string-array>
+    <string-array name="oper_change">
+        <item>изменить</item>
+        <item>изменен(-а)</item>
+        <item>изменения</item>
+    </string-array>
+    <string-array name="oper_rename">
+        <item>переименовать</item>
+        <item>переименован(-а)</item>
+        <item>переименования</item>
+    </string-array>
+    <string-array name="oper_delete">
+        <item>удалить</item>
+        <item>удален(-а)</item>
+        <item>удаления</item>
+    </string-array>
+    <string-array name="oper_copy">
+        <item>скопировать</item>
+        <item>скопирован(-а)</item>
+        <item>копирования</item>
+    </string-array>
+    <string-array name="oper_cut">
+        <item>вырезать</item>
+        <item>вырезан(-а)</item>
+        <item>вырезания</item>
+    </string-array>
+    <string-array name="oper_insert">
+        <item>вставить</item>
+        <item>вставлен(-а)</item>
+        <item>вставки</item>
+    </string-array>
+    <string-array name="oper_move">
+        <item>переместить</item>
+        <item>перемещен(-а)</item>
+        <item>перемещения</item>
+    </string-array>
+    <string-array name="oper_save">
+        <item>сохранить</item>
+        <item>сохранен(-а)</item>
+        <item>сохранения</item>
+    </string-array>
+    <string-array name="oper_attach">
+        <item>прикрепить</item>
+        <item>прикреплен(-а)</item>
+        <item>прикрепления</item>
+    </string-array>
+    <string-array name="oper_encrypt">
+        <item>зашифровать</item>
+        <item>зашифрован(-а)</item>
+        <item>зашифровки</item>
+    </string-array>
+    <string-array name="oper_decrypt">
+        <item>расшифровать</item>
+        <item>расшифрован(-а)</item>
+        <item>расшифровки</item>
+    </string-array>
+    <string-array name="oper_dropcrypt">
+        <item>сбросить шифрование</item>
+        <item>сброшено шифрование</item>
+        <item>сброса шифрования</item>
+    </string-array>
+    <string-array name="oper_reencrypt">
+        <item>перешифровать</item>
+        <item>перешифрован(-а)</item>
+        <item>перешифровки</item>
     </string-array>
 </resources>

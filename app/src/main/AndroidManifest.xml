@@ -3,25 +3,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.gee12.mytetroid"
     android:installLocation="auto">
-    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.termux.permission.RUN_COMMAND" />
+
+    <!--
+    requestLegacyExternalStorage=true - Temporarily opt-out of scoped storage from Android 10
+    From: https://developer.android.com/training/data-storage/use-cases#opt-out-scoped-storage
+    -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:requestLegacyExternalStorage="true"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <receiver android:name=".widgets.AddRecordWidget"
+            android:label="@string/title_new_record">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_add_record_info" />
+        </receiver>
+
+        <!-- android:hardwareAccelerated="true" -->
+        <service
+            android:name=".services.FileObserverService"
+            android:enabled="true"
+            android:exported="true"/>
         <!-- для dirchooser -->
         <!-- tools:replace="android:appComponentFactory" -->
         <!-- android:appComponentFactory="action_settings" -->
         <!-- tools:replace="android:theme" -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <provider
+            android:name=".TetroidSuggestionProvider"
+            android:authorities="${applicationId}.TetroidSuggestionProvider"
+            tools:replace="android:authorities" />
+
         <activity
             android:name=".activities.MainActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
-            android:launchMode="singleTop"
+            android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,35 +70,78 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter android:label="@string/title_intent_send">
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+                <data android:mimeType="text/*" />
+            </intent-filter>
 
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable_records" />
         </activity>
 
-        <provider
-            android:name=".TetroidSuggestionProvider"
-            android:authorities="com.gee12.MySuggestionProvider" />
-
         <activity
-            android:name=".activities.SettingsActivity"
-            android:label="@string/title_settings"
+            android:name=".activities.RecordActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
             android:parentActivityName=".activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-
-            <!-- android:launchMode="singleTop"> -->
-            <!-- android:screenOrientation="landscape" -->
-            <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable_text" />
         </activity>
         <activity
+            android:name=".activities.SettingsActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_settings"
+            android:parentActivityName=".activities.MainActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" /></activity>
+        <activity
             android:name=".activities.SearchActivity"
+            android:configChanges="orientation|screenSize"
             android:label="@string/title_global_search"
             android:parentActivityName=".activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.AboutActivity"
-            android:label="@string/title_about_app"
+            android:name=".activities.InfoActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_storage_info"
             android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.LogsActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_log_file_content"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.gee12.mytetroid.activities.LogsActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.IconsActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_node_icon_choice"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.AboutActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_about_app"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

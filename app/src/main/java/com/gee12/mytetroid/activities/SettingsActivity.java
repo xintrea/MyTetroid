@@ -1,33 +1,39 @@
 package com.gee12.mytetroid.activities;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.PreferenceActivity;
 import android.view.MenuItem;
-
-import com.gee12.mytetroid.LogManager;
-import com.gee12.mytetroid.R;
-import com.gee12.mytetroid.SettingsManager;
-import com.gee12.mytetroid.Utils;
-import com.gee12.mytetroid.crypt.CryptManager;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
-import lib.folderpicker.FolderPicker;
+import androidx.fragment.app.Fragment;
 
-public class SettingsActivity extends PreferenceActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
+import com.gee12.mytetroid.R;
+import com.gee12.mytetroid.fragments.settings.SettingsEncryptionFragment;
+import com.gee12.mytetroid.fragments.settings.SettingsFragment;
+import com.gee12.mytetroid.fragments.settings.SettingsOtherFragment;
+import com.gee12.mytetroid.fragments.settings.SettingsStorageFragment;
 
-    public static final int REQUEST_CODE_OPEN_STORAGE_PATH = 1;
-    public static final int REQUEST_CODE_OPEN_TEMP_PATH = 2;
-    public static final int REQUEST_CODE_OPEN_LOG_PATH = 3;
+import org.jetbrains.annotations.NotNull;
+
+/**
+ * Активность для управления настройками приложения.
+ */
+public class SettingsActivity extends AppCompatActivity {
 
     private AppCompatDelegate mDelegate;
+    private LinearLayout mLayoutProgress;
+    private TextView mTextViewProgress;
+//    private SettingsFragment mSettingsFragment;
+//    private SettingsEncryptionFragment mEncFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,135 +41,62 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
         getDelegate().onCreate(savedInstanceState);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        addPreferencesFromResource(R.xml.prefs);
+        setSupportActionBar(findViewById(R.id.toolbar));
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setVisibilityActionHome(true);
+//        addPreferencesFromResource(R.xml.prefs);
+//        this.mSettingsFragment = new SettingsFragment();
+//        this.mEncFragment = new SettingsEncryptionFragment();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.layout_settings, new SettingsFragment())//mSettingsFragment)
+                .commit();
 
-        Preference storageFolderPicker = findPreference(getString(R.string.pref_key_storage_path));
-        storageFolderPicker.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-                String path = SettingsManager.getStoragePath();
-                if (Utils.isNullOrEmpty(path)) {
-                    path = Utils.getExtPublicDocumentsDir();
-                }
-                SettingsManager.isAskReloadStorage = false;
-                openFolderPicker(getString(R.string.folder_chooser_title),
-                        path,
-                        REQUEST_CODE_OPEN_STORAGE_PATH);
-                return true;
-            }
-        });
-
-        Preference tempFolderPicker = findPreference(getString(R.string.pref_key_temp_path));
-        tempFolderPicker.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-                openFolderPicker(getString(R.string.temp_path),
-                        SettingsManager.getTempPath(),
-                        REQUEST_CODE_OPEN_TEMP_PATH);
-                return true;
-            }
-        });
-
-        Preference logFolderPicker = findPreference(getString(R.string.pref_key_log_path));
-        logFolderPicker.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-                openFolderPicker(getString(R.string.log_path),
-                        SettingsManager.getLogPath(),
-                        REQUEST_CODE_OPEN_LOG_PATH);
-                return true;
-            }
-        });
+        this.mLayoutProgress = findViewById(R.id.layout_progress_bar);
+        this.mTextViewProgress = findViewById(R.id.progress_text);
     }
 
-    private void openFolderPicker(String title, String location, int requestCode) {
-        Intent intent = new Intent(SettingsActivity.this, FolderPicker.class);
-        intent.putExtra("title", title);
-        intent.putExtra("location", location);
-        startActivityForResult(intent, requestCode);
+    public void setProgressVisibility(boolean vis, String text) {
+        if (vis) {
+            mTextViewProgress.setText(text);
+            mLayoutProgress.setVisibility(View.VISIBLE);
+        } else {
+            mLayoutProgress.setVisibility(View.GONE);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NotNull String[] permissions, @NotNull int[] grantResults) {
+        boolean permGranted = (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED);
+//        mSettingsFragment.onRequestPermissionsResult(permGranted, requestCode);
+        Fragment fragment = getCurFragment();
+        if (fragment instanceof SettingsStorageFragment) {
+            ((SettingsStorageFragment)fragment).onRequestPermissionsResult(permGranted, requestCode);
+        } else if (fragment instanceof SettingsOtherFragment) {
+            ((SettingsOtherFragment)fragment).onRequestPermissionsResult(permGranted, requestCode);
+        }
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode != Activity.RESULT_OK) return;
-        String folderFullName = data.getStringExtra("data");
-        if (requestCode == REQUEST_CODE_OPEN_STORAGE_PATH) {
-            if (!folderFullName.equals(SettingsManager.getStoragePath())) {
-                SettingsManager.isAskReloadStorage = true;
-            }
-            SettingsManager.setStoragePath(folderFullName);
-        } else if (requestCode == REQUEST_CODE_OPEN_TEMP_PATH) {
-            SettingsManager.setTempPath(folderFullName);
-        } else if (requestCode == REQUEST_CODE_OPEN_LOG_PATH) {
-            SettingsManager.setLogPath(folderFullName);
-            LogManager.setLogPath(folderFullName);
+//        mSettingsFragment.onResult(requestCode, resultCode, data);
+        Fragment fragment = getCurFragment();
+        if (fragment instanceof SettingsStorageFragment) {
+            ((SettingsStorageFragment)fragment).onResult(requestCode, resultCode, data);
+        } else if (fragment instanceof SettingsOtherFragment) {
+            ((SettingsOtherFragment)fragment).onResult(requestCode, resultCode, data);
         }
-    }
-
-    /**
-     * Обработчик изменения настроек.
-     * Чтобы работало нужно переопределить onResume() и onPause()
-     * и дописать register/unregister настроек.
-     * @param sharedPreferences
-     * @param key
-     */
-    @Override
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        if (key.equals(getString(R.string.pref_key_storage_path))) {
-            // вызывается, когда задаем
-            // удаляем хэш пароля, если поменяли хранилище
-//            String newStoragePath = SettingsManager.getStoragePath();
-//            if (Utils.isNullOrEmpty(newStoragePath) || !newStoragePath.equals(SettingsManager.LastStoragePath)) {
-//                SettingsManager.setMiddlePassHash(null);
-//            }
-
-        } else if (key.equals(getString(R.string.pref_key_is_save_pass_hash_local))) {
-            if (SettingsManager.isSaveMiddlePassHashLocal()) {
-                // сохраняем хеш пароля локально в настройках
-                SettingsManager.setMiddlePassHash(CryptManager.getMiddlePassHash());
-            }
-            else  {
-                // удаляем хэш пароля, если сняли галку
-                SettingsManager.setMiddlePassHash(null);
-            }
-//        } else if (key.equals(getString(R.string.pref_key_record_fields_cols))) {
-//            // меняем список полей для отображения
-
-        } else if (key.equals(getString(R.string.pref_key_is_highlight_attach))) {
-            // включаем/выключаем выделение записей с файлами
-            SettingsManager.IsHighlightAttachCache = SettingsManager.isHighlightRecordWithAttach();
-
-        } else if (key.equals(getString(R.string.pref_key_highlight_attach_color))) {
-            // меняем цвет выделения записей с файлами
-            SettingsManager.HighlightAttachColorCache = SettingsManager.getHighlightAttachColor();
-        } else if (key.equals(getString(R.string.pref_key_date_format_string))) {
-            // меняем формат даты
-            SettingsManager.DateFormatStringCache = SettingsManager.getDateFormatString();
-        } else if (key.equals(getString(R.string.pref_key_is_write_log))) {
-            // меняем флаг
-            LogManager.init(this, SettingsManager.getLogPath(), SettingsManager.isWriteLog());
-        }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        SettingsManager.getSettings().registerOnSharedPreferenceChangeListener(this);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        SettingsManager.getSettings().unregisterOnSharedPreferenceChangeListener(this);
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == android.R.id.home) {
-            finish();
+//            finish();
+//            return true;
+            onBackPressed();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -202,7 +135,7 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
         getDelegate().onDestroy();
     }
 
-    private void setSupportActionBar(@Nullable Toolbar toolbar) {
+    public void setSupportActionBar(@Nullable Toolbar toolbar) {
         getDelegate().setSupportActionBar(toolbar);
     }
 
@@ -211,10 +144,41 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
         return this.getDelegate().getSupportActionBar();
     }
 
-    private AppCompatDelegate getDelegate() {
+    public AppCompatDelegate getDelegate() {
         if (mDelegate == null) {
             mDelegate = AppCompatDelegate.create(this, null);
         }
         return mDelegate;
+    }
+
+    @Override
+    public void onBackPressed() {
+        boolean isBackPressed = false;
+        Fragment fragment = getCurFragment();
+        // обрабатываем нажатие Back во фрагменте SettingsEncryptionFragment отдельно
+        if (fragment instanceof SettingsEncryptionFragment) {
+            if (!((SettingsEncryptionFragment)fragment).onBackPressed()) {
+                isBackPressed = true;
+            }
+        } else {
+            isBackPressed = true;
+        }
+        if (isBackPressed) {
+            if (!(fragment instanceof SettingsFragment)) {
+                setTitle(R.string.title_settings);
+            }
+            super.onBackPressed();
+        }
+    }
+
+    private Fragment getCurFragment() {
+        return getSupportFragmentManager().findFragmentById(R.id.layout_settings);
+    }
+
+    protected void setVisibilityActionHome(boolean isVis) {
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(isVis);
+        }
     }
 }

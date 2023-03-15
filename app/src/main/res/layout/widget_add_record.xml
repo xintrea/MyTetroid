@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin">
+
+    <ImageButton
+        android:id="@+id/button_add_record"
+        android:layout_width="@dimen/widget_image_dimens"
+        android:layout_height="@dimen/widget_image_dimens"
+        android:layout_centerHorizontal="true"
+        android:src="@android:drawable/ic_input_add"
+        android:background="@drawable/ic_mytetroid"
+        android:scaleType="centerInside"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_add_record"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/widget_text_padding_top"
+        android:shadowColor="#333"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="@string/title_add_record"
+        android:textAlignment="center"
+        android:textColor="#EEE"
+        android:textSize="12sp"
+        android:lineSpacingExtra="@dimen/widget_line_spacing"
+        android:fontFamily="sans-serif-condensed"/>
+<!--    android:lineHeight="@dimen/widget_line_height"-->
+
+</RelativeLayout>

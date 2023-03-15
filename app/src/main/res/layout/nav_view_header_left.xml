@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
     android:background="@drawable/side_nav_bar"
@@ -44,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/text_view_app_name"
-            android:text="@string/nodes_header"
+            android:text="@string/subtitle_nodes"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="@dimen/nav_view_headers_text_size"
             android:textStyle="italic"
@@ -52,7 +51,7 @@
             android:paddingLeft="12dp"
             android:paddingRight="6dp"/>
 
-        <SearchView
+        <androidx.appcompat.widget.SearchView
             android:id="@+id/search_view_nodes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,7 +59,9 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:iconifiedByDefault="true"
-            android:queryHint="@string/nodes_search_hint" />
+            android:visibility="invisible"
+            app:defaultQueryHint="@string/title_nodes_filter_hint"
+            android:queryHint="@string/title_nodes_filter_hint" />
 
     </RelativeLayout>
 

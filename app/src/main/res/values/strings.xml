@@ -1,13 +1,175 @@
 <resources>
-    <string name="app_name">MyTetroid</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="main_header_title">MyTetroid</string>
-    <string name="site_url">gee12.space</string>
-    <string name="project_url"><![CDATA[Project page: <a href=\'https://gee12.space/mytetroid\'>gee12.space/mytetroid</a>]]></string>
+
+    <string name="app_id" translatable="false">com.gee12.mytetroid</string>
+    <string name="app_name" translatable="false">MyTetroid</string>
+    <string name="main_header_title" translatable="false">MyTetroid</string>
+    <string name="app_summ_html"><![CDATA[Android-client for full-featured PIM-manager <a style=\'color:#303F9F\' href=\'https://webhamster.ru/site/page/index/articles/projectcode/105\'>MyTetra</a>]]></string>
+    <string name="project_url_html"><![CDATA[Project page: <a href=\'https://gee12.space/mytetroid\'>www.gee12.space/mytetroid</a>]]></string>
+    <string name="policy_link_html"><![CDATA[<a href=\'https://gee12.space/mytetroid/policy\'>Privacy Policy</a>]]></string>
+
+    <string name="hint_load_all_nodes"><![CDATA[<load all nodes>]]></string>
+    <string name="hint_error"><![CDATA[<error>]]></string>
+
     <string name="title_settings">Settings</string>
-    <string name="records_is_missing">Records is missing</string>
-    <string name="select_the_node">Select the node...</string>
+    <string name="title_open">Open</string>
+    <string name="title_password_enter">Enter password</string>
+    <string name="title_password_set">Set password</string>
+    <string name="title_password_change">Change password</string>
+    <string name="title_pin_enter">Enter PIN</string>
+    <string name="title_pin_set">Set PIN</string>
+    <string name="title_pin_confirm">Confirm PIN</string>
+    <string name="title_storage_folder">Storage folder</string>
+    <string name="title_record_folder">Record folder</string>
+    <string name="title_show_record_content">Open record</string>
+    <string name="title_show_attached_files">Attached files</string>
+    <string name="title_open_record_folder">Open folder</string>
+    <string name="title_global_search">Global search</string>
+    <string name="title_filter_records">Records filter</string>
+    <string name="title_open_tag_records">Open tag records</string>
+    <string name="title_edit_record_fields">Edit properties</string>
+    <string name="title_edit_mode">Editing</string>
+    <string name="title_view_mode">Viewing</string>
+    <string name="title_expand_node_subnodes">Expand all subnodes</string>
+    <string name="title_collapse_node_subnodes">Collapse all subnodes</string>
+    <string name="title_create_subnode">Create subnode</string>
+    <string name="title_create_node">Create node nearly</string>
+    <string name="title_move_up">Move up</string>
+    <string name="title_move_down">Move down</string>
+    <string name="title_copy_link">Copy link</string>
+    <string name="title_storage_sync">Sync</string>
+    <string name="title_choose_sync_app">Choose sync app</string>
+    <string name="title_delete">Delete</string>
+    <string name="title_show_node">Show node</string>
+    <string name="title_set_node_icon">Set icon</string>
+    <string name="title_encrypt_node">Encrypt</string>
+    <string name="title_decrypt_node">Decrypt</string>
+    <string name="title_rename">Rename</string>
+    <string name="title_cut">Cut</string>
+    <string name="title_copy">Copy</string>
+    <string name="title_insert">Insert</string>
+    <string name="title_open_with">Open with</string>
+    <string name="title_send_to">Send to</string>
+    <string name="title_about_app">About app</string>
+    <string name="title_record_html">html-code</string>
+    <string name="title_record_save">Save</string>
+    <string name="title_search_text">Search text</string>
+    <string name="title_gallery">Gallery</string>
+    <string name="title_show">Show</string>
+    <string name="title_log_file_content">Logs</string>
+    <string name="title_storage_info">Storage info</string>
+    <string name="title_node_icon_choice">Select icon</string>
+    <string name="title_move_back">Move to back</string>
+    <string name="title_to_node">To record node</string>
+    <string name="title_attached_files">Attached files</string>
+    <string name="title_cur_record">Record text</string>
+    <string name="title_fullscreen">Fullscreen</string>
+    <string name="title_record_folder_path">Record folder path</string>
+    <string name="title_insert_record">Insert record</string>
+    <string name="title_share">Share</string>
+    <string name="title_intent_send">Mytetroid</string>
+    <string name="title_not_implemented_yet">(not implemented yet)</string>
+    <string name="title_trash_cleared">Trash folder was cleared</string>
+    <string name="title_trash_clear_error">Failed to empty trash folder</string>
+    <string name="title_search_history_cleared">Search history was cleared</string>
+    <string name="title_insert_beside">Insert beside</string>
+    <string name="title_insert_subnode">Insert like subnode</string>
+    <string name="title_delete_record">Delete record</string>
+    <string name="title_confirm_selected_images">Confirm</string>
+    <string name="title_recod_edit_mode">Edit mode</string>
+    <string name="title_file_name_with_ext">File name with extension</string>
+    <string name="title_select_file_to_upload">Select file to upload</string>
+    <string name="title_crypted_node_name">Closed</string>
+    <string name="title_file_is_missing">File is missing&#160;</string>
+    <string name="title_records_is_missing">Records is missing</string>
+    <string name="title_favors_is_missing">Favorite records is missing</string>
+    <string name="title_select_the_node">Select the node…</string>
+    <string name="title_files_is_missing">Attach is missing</string>
+    <string name="title_license_gnu_gpl_v3_0">License GNU GPL v3.0</string>
+    <string name="title_rate_app">Rate app</string>
+    <string name="title_version_label">Version</string>
+    <string name="title_tags_filter_hint">Tags filter</string>
+    <string name="title_nodes_filter_hint">Nodes filter</string>
+    <string name="title_nodes_is_missing">Nodes is missing</string>
+    <string name="title_show_node_records">Show node records</string>
+    <string name="title_enter_query">Enter the search query</string>
+    <string name="title_tag_name_is_empty">Tag name is empty</string>
+    <string name="title_open_file">Open file</string>
+    <string name="title_link_was_copied">Link was copied:&#160;</string>
+    <string name="title_open_storage">Choose storage</string>
+    <string name="title_create_storage">Create storage</string>
+    <string name="title_open_storage_summ">Select an existing storage directory in the phone memory</string>
+    <string name="title_first_node">First node</string>
+    <string name="title_file_save_as">Save as</string>
+    <string name="title_save_file_to">Save file to..</string>
+    <string name="title_load_nodes">Load all nodes</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="title_remove_favor">Remove from favorites</string>
+    <string name="title_add_favor">Add to davorites</string>
+    <string name="title_need_load_nodes">First load all storage nodes</string>
+    <string name="title_available_in_pro">Available in version Pro</string>
+    <string name="title_not_avail_when_favor">Not available when loading only favorites</string>
+    <string name="title_not_avail_when_save_pass">Not available when saving password locally</string>
+    <string name="title_need_init_storage">First you need to select/create storage</string>
+    <string name="title_need_perm_init_storage">First you need to grant write permission and select/create storage</string>
+    <string name="title_need_load_storage">First need to load storage</string>
+    <string name="title_record_info">Record info</string>
+    <string name="title_file_info">File info</string>
+    <string name="title_node_info">Node info</string>
+    <string name="title_folder_is_missing">Folder is missing</string>
+    <string name="title_use_global_search">Use global search</string>
+    <string name="title_reload_storage">Reload storage</string>
+    <string name="title_load_all_nodes">Load all nodes</string>
+    <string name="title_more_in_logs">More in logs</string>
+    <string name="title_author">Author</string>
+    <string name="title_tags">Tags</string>
+    <string name="title_created">Created date</string>
+    <string name="title_edited">Edited date</string>
+    <string name="title_storage_path_desc">Select the folder containing files database.ini, mytetra.xml and subfolder base/</string>
+    <string name="title_record">Record</string>
+    <string name="title_node">Node</string>
+    <string name="title_tag">Tag</string>
+    <string name="title_enter_pin_code_length">Enter PIN-code length</string>
+    <string name="title_new_record">New record</string>
+    <string name="title_add_record">Add record</string>
+    <string name="title_select_node"><![CDATA[<Select the node>]]></string>
+    <string name="title_choose_node">Select node</string>
+    <string name="title_founded_in_mask">Founded in: %s</string>
+    <string name="title_by_records_num">By records num</string>
+    <string name="title_by_tag_name">By name desc</string>
+    <string name="title_root_node"><![CDATA[<Root node>]]></string>
+    <string name="title_drop_icon">Drop icon</string>
+    <string name="title_done">Done</string>
+    <string name="title_app_termux" translatable="false">Termux</string>
+    <string name="title_app_mgit" translatable="false">MGit</string>
+    <string name="title_download_attach_file_by_link">Attach file from link</string>
+
+    <string name="text_intent_create_text">Insert into a new record; Create a new record and add the transferred text</string>
+    <string name="text_intent_create_image">Insert into a new record; Create a new record and add the transferred image (s) to its text</string>
+    <string name="text_intent_create_image_attach">Attach to a new record; Create a new record and attach the transferred image (s) as file (s)</string>
+    <string name="text_intent_exist_text">Paste into existing record; Select existing record and add transferred text</string>
+    <string name="text_intent_exist_image">Insert into an existing entry; Select an existing entry and add the transferred image (s) to its text</string>
+    <string name="text_intent_exist_image_attach">Attach to an existing entry; Select an existing entry and attach the transferred image (s) as file (s)</string>
+    <string name="text_pass_input_html"><![CDATA[The password will be used to encrypt selected nodes with records.]]></string>
+    <string name="text_pass_change_warning_html"><![CDATA[<b>Attention!</b> When saving, re-encryption of all encrypted data to the new password will begin.]]></string>
+    <string name="text_create_storage_summ_html"><![CDATA[Select a directory in the phone memory to create a new storage <b>(directory contents will be cleared)</b>]]></string>
+    <string name="text_load_nodes_before_receive_mask"><![CDATA[In the application the boot mode is <b>load only favorites</b>. To receive %s, you need to load all nodes of the storage.<br>Proceed?]]></string>
+
+    <string name="mes_input_wrong_date_format">Incorrect date/time format string entered</string>
+    <string name="mes_select_non_encrypted_node">Select a non-encrypted node</string>
+    <string name="mes_select_decrypted_node">Select a decrypted node</string>
+    <string name="mes_select_first_level_node">Select the first level node</string>
+    <string name="mes_quickly_node_cannot_encrypt">This node cannot be encrypted because it is selected for quick insertion in settings</string>
+    <string name="mes_attached_file_mask">Attached file \"%s\"</string>
+    <string name="mes_attached_files_mask">Attached files: %d</string>
+
+    <string name="word_received_text">text</string>
+    <string name="word_received_image">image</string>
+    <string name="word_received_images">images</string>
+
+    <string name="launched">launched</string>
+    <string name="relaunched">re-launched</string>
+    <string name="stopped">stopped</string>
+
     <string name="pref_is_load_last_storage_path">Load previous</string>
     <string name="pref_is_load_last_storage_path_summ">Load last used storage</string>
     <string name="pref_category_crypt">Encryption</string>
@@ -16,7 +178,8 @@
     <string name="pref_key_storage_path" translatable="false">pref_key_storage_path</string>
     <string name="pref_key_is_save_pass_hash_local" translatable="false">pref_key_is_save_pass_hash_local</string>
     <string name="pref_key_is_load_last_storage_path" translatable="false">pref_key_is_load_last_storage_path</string>
-    <string name="pref_key_category_other">Rest</string>
+    <string name="pref_category_handling">Handling</string>
+    <string name="pref_category_other">Rest</string>
     <string name="pref_is_keep_selected_node">Choose the last branch</string>
     <string name="pref_is_keep_selected_node_summ">Set the current branch selected last time</string>
     <string name="pref_key_is_keep_selected_node" translatable="false">pref_key_is_select_last_node</string>
@@ -25,101 +188,172 @@
     <string name="pref_key_is_highlight_attach" translatable="false">pref_key_highlight_attach</string>
     <string name="pref_is_highlight_attach">Highlight entries with attach</string>
     <string name="pref_is_highlight_attach_summ">Enable highlight entries with attached files</string>
+    <string name="pref_key_is_highlight_crypted_nodes" translatable="false">pref_key_is_highlight_crypted_nodes</string>
+    <string name="pref_is_highlight_crypted_nodes">Highlight encrypted nodes</string>
+    <string name="pref_is_highlight_crypted_nodes_summ">Enable highlight encrypted nodes</string>
+<!--    <string name="pref_is_show_author_in_records">Show author</string>-->
+<!--    <string name="pref_is_show_author_in_records_summ">Show author in record list</string>-->
+<!--    <string name="pref_is_show_tags_in_records">Show tags</string>-->
+<!--    <string name="pref_is_show_tags_in_records_summ">Show tags in record list</string>-->
     <string name="pref_key_highlight_attach_color" translatable="false">pref_highlight_attach_color</string>
+    <string name="pref_key_picked_colors" translatable="false">pref_key_picked_colors</string>
     <string name="pref_highlight_attach_color">Highlight color</string>
     <string name="pref_when_ask_password">Ask for a password</string>
     <string name="pref_when_ask_password_summ">When to ask for a password?</string>
     <string name="pref_key_when_ask_password" translatable="false">pref_key_when_aks_password</string>
-    <string name="pref_when_ask_password_on_select">When choosing an encrypted branch</string>
-    <string name="pref_when_ask_password_on_start">When the application starts</string>
+    <string name="pref_when_ask_password_on_select">When choosing an encrypted node</string>
+    <string name="pref_when_ask_password_on_start">When loading the storage </string>
     <string name="pref_key_pass_hash" translatable="false">pref_key_pass_hash</string>
+    <string name="pref_key_pin_code_length" translatable="false">pref_key_pin_code_length</string>
+    <string name="pref_key_pin_code_hash" translatable="false">pref_key_pin_code_hash</string>
     <string name="pref_key_selected_node_id" translatable="false">pref_key_selected_node_id</string>
-    <string name="title_pass_input">Enter password</string>
-    <string name="answer_ok">Ok</string>
-    <string name="answer_cancel">Cancel</string>
-    <string name="files_is_missing">Attach is missing</string>
-    <string name="pref_category_srorage">Storage</string>
-    <string name="pref_storage_path">Storage path</string>
-    <string name="pref_storage_path_summ">Path containing database.ini, mytetra.xml and /base</string>
-    <string name="missing_read_ext_storage_permissions">Not enough permissions to access the external file storage</string>
-    <string name="empty_middle_hash_check_data_field">Missing password check information (field %s is empty in database.ini). Anyway decrypt with this password?</string>
-    <string name="answer_yes">Yes</string>
-    <string name="answer_no">No</string>
-    <string name="wrong_saved_pass">Wrong saved pass</string>
-    <string name="record_tags_label">Tags:</string>
-    <string name="record_author_label">Author:</string>
-    <string name="record_uri_label">Url:</string>
-    <string name="record_date_label">Date:</string>
+    <string name="pref_category_storage">Storage</string>
+    <string name="pref_storage_path">Storage folder</string>
+    <string name="pref_storage_path_summ">Path containing database.ini, mytetra.xml and base/</string>
+    <string name="pref_key_is_decrypt_in_temp" translatable="false">pref_key_is_decrypt_in_temp</string>
+    <string name="pref_key_is_use_trash" translatable="false">pref_key_is_use_trash</string>
+    <string name="pref_trash_path">Trash catalog</string>
+    <string name="pref_trash_path_summ">Trash catalog path</string>
+    <string name="pref_key_temp_path" translatable="false">pref_key_temp_path</string>
+    <string name="pref_key_trash_path" translatable="false">pref_key_trash_path</string>
     <string name="pref_key_date_format_string" translatable="false">pref_key_date_format_string</string>
     <string name="pref_date_format_string">Date format string</string>
     <string name="pref_date_format_string_summ">Format string for created date/time display</string>
-    <string name="def_date_format_string" translatable="false">dd.MM.yyyy HH:mm</string>
-    <string name="folder_chooser_title">Storage folder</string>
-    <string name="app_summ_html"><![CDATA[Storage viewer full-featured PIM-manager <a style=\'color:#303F9F\' href=\'https://webhamster.ru/site/page/index/articles/projectcode/105\'>MyTetra</a>]]></string>
-    <string name="title_about_app">About app</string>
-    <string name="license_gnu_gpl_v3_0">License GNU GPL v3.0</string>
-    <string name="rate_app">Rate app</string>
-    <string name="version_label">Version</string>
-    <string name="password_is_incorrect">Password is incorrect</string>
-    <string name="m_bytes">Mb</string>
-    <string name="k_bytes">Kb</string>
-    <string name="show_record_content">Open record</string>
-    <string name="show_attached_files">Attached files</string>
-    <string name="open_record_folder">Open folder</string>
-    <string name="open_record_folder_dialog">Open record folder</string>
-    <string name="pref_key_is_decrypt_in_temp" translatable="false">pref_key_is_decrypt_in_temp</string>
-    <string name="temp_path">Temporary catalog</string>
-    <string name="temp_path_summ">Temporary catalog path</string>
-    <string name="pref_key_temp_path" translatable="false">pref_key_temp_path</string>
-    <string name="viewing_decrypted_not_possible">Viewing the encrypted file is not possible. Enable the option "Decrypt to a temporary directory"</string>
-    <string name="could_not_decrypt_file">Could not decrypt file</string>
-    <string name="could_not_create_temp_dir">Could not create temp directory </string>
-    <string name="file_decryption_error">File decryption error: </string>
-    <string name="decrypt_files_to_temp_dir">Decrypt files to directory</string>
-    <string name="decrypt_files_to_temp_dir_sum">Decrypt attachments to a temporary directory when previewing</string>
-    <string name="storage_path_was_changed">Storage path was changed. Reload database?</string>
-    <string name="pref_key_category_display">Display</string>
+    <string name="pref_category_display">Display</string>
     <string name="pref_key_is_write_log" translatable="false">pref_key_is_write_log</string>
     <string name="pref_key_log_path" translatable="false">pref_key_log_path</string>
-    <string name="write_log">Is write log</string>
-    <string name="is_write_log">Log events to file</string>
-    <string name="log_path">Logs catalog</string>
-    <string name="log_path_summ">Path to catalog with log file</string>
-    <string name="storage_init_error">Storage initialization error</string>
-    <string name="errors_during_decryption">Errors occurred during decryption.</string>
-    <string name="details_in_logs">Details in the logs</string>
-    <string name="for_more_info_enable_log">For more information, enable logging</string>
-    <string name="app_start">Run app. Version %s</string>
-    <string name="storage_loaded">Storage is loaded: </string>
-    <string name="show_pass_dialog"> Starting the password request dialog</string>
-    <string name="storage_decrypted">Storage is decrypted</string>
-    <string name="storage_settings_inited">Storage settings is loaded: </string>
-    <string name="tags_is_missing">Tags is missing</string>
-    <string name="tags_header">TAGS</string>
-    <string name="exit_from_app">Exit from app?</string>
+    <string name="pref_write_log_to_file">Is write log to file</string>
+    <string name="pref_write_log_to_file_summ">Log events to file</string>
+    <string name="pref_log_path">Logs catalog</string>
+    <string name="pref_log_path_summ">Path to catalog with log file</string>
     <string name="pref_key_is_confirm_app_exit" translatable="false">pref_key_is_confirm_app_exit</string>
-    <string name="is_confirm_app_exit">Confirm app exit</string>
-    <string name="is_confirm_app_exit_summ">Show confirmation dialog for application exit</string>
-    <string name="file_is_missing">File is missing</string>
-    <string name="storage_loading">Storage loading..</string>
-    <string name="start_storage_loading">Start storage loading: </string>
-    <string name="search_records_hint">Records search</string>
-    <string name="title_search_records">Records search</string>
-    <string name="records_search_select_node">Select not an ampty branch or use the global search.</string>
-    <string name="records_not_found">No records found for query \"%s\" in node [%s]..</string>
-    <string name="files_not_found">No files found for query \"%s\"..</string>
-    <string name="search_records_by_query">Search records in node [%s] by query "%s"</string>
-    <string name="search_files_by_query">Search files in record [%s] by query "%s"</string>
-    <string name="search_text_by_query">Search text in record [%s] by query "%s"</string>
-    <string name="tags_search_hint">Tags search</string>
-    <string name="nodes_search_hint">Nodes search</string>
-    <string name="nodes_header">NODES</string>
-    <string name="nodes_is_missing">Nodes is missing</string>
-    <string name="nodes_not_found">No nodes found for query \"%s\"..</string>
-    <string name="search_nodes_by_query">Search nodes by query "%s"..</string>
-    <string name="tags_not_found">No tags found for query \"%s\"..</string>
-    <string name="search_tags_by_query">Search tagsString by query "%s"..</string>
-    <string name="title_global_search">Global search</string>
+    <string name="pref_is_confirm_app_exit">Confirm app exit</string>
+    <string name="pref_is_confirm_app_exit_summ">Show confirmation dialog for application exit</string>
+    <string name="pref_category_sync">Sync</string>
+    <string name="pref_is_sync_storage">Sync storage</string>
+    <string name="pref_is_sync_summ">The mechanism for transmitting a synchronization start command to the third-party application</string>
+    <string name="pref_is_sync_before_loading">Sync before loading</string>
+    <string name="pref_is_sync_before_loading_summ">Start synchronization before loading storage</string>
+    <string name="pref_is_sync_before_exit">Sync before exit</string>
+    <string name="pref_is_sync_before_exit_summ">Start synchronization before exit from app</string>
+    <string name="pref_key_sync_command" translatable="false">pref_key_sync_command</string>
+    <string name="pref_sync_command">Sync command</string>
+    <string name="pref_sync_command_summ">A synchronization command or script, for example: \"git pull\" or \"~/sync.sh\" (depends on a third-party application).\nMacro% a - storage directory</string>
+    <string name="pref_key_is_sync_storage" translatable="false">pref_key_is_sync_storage</string>
+    <string name="pref_key_is_sync_before_init" translatable="false">pref_key_is_sync_before_init</string>
+    <string name="pref_key_is_not_remember_sync_app" translatable="false">pref_key_is_remember_sync_app</string>
+<!--    <string name="pref_is_not_remember_sync_app">Do not remember application</string>-->
+<!--    <string name="pref_is_not_remember_sync_app_summ">Do not use the standard mechanism for remembering the last used application for sync</string>-->
+    <string name="pref_key_search_text" translatable="false">pref_key_search_text</string>
+    <string name="pref_key_search_records_names" translatable="false">pref_key_search_records_names</string>
+    <string name="pref_key_search_author" translatable="false">pref_key_search_author</string>
+    <string name="pref_key_search_url" translatable="false">pref_key_search_url</string>
+    <string name="pref_key_search_tags" translatable="false">pref_key_search_tags</string>
+    <string name="pref_key_search_nodes" translatable="false">pref_key_search_nodes</string>
+    <string name="pref_key_search_files" translatable="false">pref_key_search_files</string>
+    <string name="pref_key_search_ids" translatable="false">pref_key_search_ids</string>
+    <string name="pref_key_search_split_to_words" translatable="false">pref_key_search_split_to_words</string>
+    <string name="pref_key_search_in_whole_words" translatable="false">pref_key_search_in_whole_words</string>
+    <string name="pref_key_search_in_cur_node" translatable="false">pref_key_search_in_cur_node</string>
+    <string name="pref_key_search_in_node_mode" translatable="false">pref_key_search_in_node_mode</string>
+    <string name="pref_key_search_node_id" translatable="false">pref_key_search_node_id</string>
+    <string name="pref_key_search_query" translatable="false">pref_key_search_query</string>
+    <string name="pref_key_is_record_auto_save" translatable="false">pref_key_is_record_auto_save</string>
+    <string name="pref_category_edit">Edit</string>
+    <string name="pref_record_auto_save">Save automatically</string>
+    <string name="pref_record_auto_save_summ">Save record changes automatically when editing is completed</string>
+    <string name="pref_key_last_folder" translatable="false">pref_key_last_folder</string>
+    <string name="pref_keep_screen_on">Keep screen on</string>
+    <string name="pref_key_is_keep_screen_on" translatable="false">pref_key_keep_screen_on</string>
+    <string name="pref_key_is_show_author_in_records" translatable="false">pref_key_is_show_author_in_records</string>
+    <string name="pref_key_is_show_tags_in_records" translatable="false">pref_key_is_show_tags_in_records</string>
+    <string name="pref_keep_screen_on_summ">Do not turn off the screen when record is open</string>
+    <string name="pref_key_is_ask_before_sync" translatable="false">pref_key_is_answer_before_sync</string>
+    <string name="pref_key_is_ask_before_exit_sync" translatable="false">pref_key_is_answer_before_exit_sync</string>
+    <string name="pref_ask_before_sync">Ask before sync</string>
+    <string name="pref_ask_before_sync_summ">Show confirmation of synchronization start</string>
+    <string name="pref_ask_before_sync_summ_exit">Show confirmation of synchronization start before exit from app</string>
+    <string name="pref_key_is_record_edit_mode" translatable="false">pref_key_is_record_edit_mode</string>
+    <string name="pref_key_show_logs" translatable="false">pref_key_show_logs</string>
+    <string name="pref_show_logs">Show logs</string>
+    <string name="pref_show_logs_summ">The logs of the current startup session or the contents of the log file</string>
+    <string name="pref_key_clear_search_history" translatable="false">pref_key_clear_search_history</string>
+    <string name="pref_clear_search_history">Clear search history</string>
+    <string name="pref_clear_trash">Clear trash</string>
+    <string name="pref_key_clear_trash" translatable="false">pref_key_clear_trash</string>
+    <string name="pref_clear_trash_summ">Delete contents of trash folder</string>
+    <string name="pref_clear_search_history_summ">Delete query input hints and global search options</string>
+    <string name="pref_record_edit_mode_summ">Open recordings immediately in edit mode, not view</string>
+    <string name="pref_decrypt_files_to_trash_dir">Decrypt files to directory</string>
+    <string name="pref_decrypt_files_to_trash_dir_summ">Decrypt attachments to a trash directory when opening</string>
+    <string name="pref_key_change_pass" translatable="false">pref_key_change_pass</string>
+    <string name="pref_change_pass">Change password</string>
+    <string name="pref_change_pass_summ">Change password and re-encrypt encrypted nodes</string>
+    <string name="pref_setup_pass">Setup password</string>
+    <string name="pref_setup_pass_summ">Set password for encrypt nodes</string>
+    <string name="pref_key_is_load_favorites" translatable="false">pref_key_is_load_favorites</string>
+    <string name="pref_key_favorites" translatable="false">pref_key_favorites</string>
+    <string name="pref_key_favorites_json" translatable="false">pref_key_favorites_json</string>
+    <string name="pref_load_only_favorites">Load only favorites (Pro)</string>
+    <string name="pref_load_only_favorites_summ">To speed up the startup, first load only favorite entries</string>
+    <string name="pref_key_category_other" translatable="false">pref_key_category_other</string>
+    <string name="pref_key_check_outside_changing" translatable="false">pref_key_check_outside_changing</string>
+    <string name="pref_check_outside_changing">Track outside changes</string>
+    <string name="pref_check_outside_changing_summ">Check records tree for changes by third-party programs</string>
+    <string name="pref_key_request_pin_code" translatable="false">pref_key_request_pin_code</string>
+    <string name="pref_request_pin_code">Use PIN-code</string>
+    <string name="pref_request_pin_code_summ">If the password is saved, prompt for a PIN to access encrypted data</string>
+    <string name="pref_key_fix_empty_paragraphs" translatable="false">pref_key_fix_empty_paragraphs</string>
+    <string name="pref_fix_empty_paragraphs">Fix html on save</string>
+    <string name="pref_fix_empty_paragraphs_summ">Correct html-text of a note for correct display in MyTetra</string>
+    <string name="pref_key_quickly_node_id" translatable="false">pref_key_quickly_node_id</string>
+    <string name="pref_key_quickly_node_name" translatable="false">pref_key_quickly_node_name</string>
+    <string name="pref_key_show_record_fields" translatable="false">pref_key_show_record_fields</string>
+    <string name="pref_show_record_fields">Show record fields</string>
+    <string name="pref_show_record_fields_summ">Whether to open the panel with record properties when opening a record</string>
+    <string name="title_record_fields">Record fields</string>
+    <string name="pref_show_record_fields_yes">Show</string>
+    <string name="pref_show_record_fields_no">Do not show</string>
+    <string name="pref_show_record_fields_filled">Show if filled</string>
+    <string name="pref_key_record_fields_in_list" translatable="false">pref_key_record_fields_in_list</string>
+    <string name="pref_record_fields_in_list">Record fields to show</string>
+    <string name="pref_record_fields_in_list_summ">Record fields to show in list</string>
+    <string name="pref_key_tags_sort_mode" translatable="false">pref_key_tags_sort_mode</string>
+    <string name="pref_key_app_for_sync" translatable="false">pref_key_app_for_sync</string>
+    <string name="pref_app_for_sync">Application</string>
+    <string name="pref_app_for_sync_summ">Application used to start sync</string>
+    <string name="pref_key_is_sync_before_exit" translatable="false">pref_key_is_sync_before_exit</string>
+    <string name="pref_expand_empty_nodes">Expand empty nodes</string>
+    <string name="pref_expand_empty_nodes_summ">Expanding an empty nodes instead of opening a list of its records</string>
+    <string name="pref_key_is_expand_empty_nodes" translatable="false">pref_key_is_expand_empty_nodes</string>
+    <string name="pref_key_show_nodes_instead_exit" translatable="false">pref_key_show_nodes_instead_exit</string>
+    <string name="pref_show_nodes_instead_exit_summ">Show the nodes tree when clicking on the Back button, instead of app exit</string>
+    <string name="pref_show_nodes_instead_exit">Show nodes when clicking on the Back</string>
+    <string name="pref_key_double_tap_fullscreen" translatable="false">pref_key_double_tap_fullscreen</string>
+    <string name="pref_double_tap_fullscreen">Fullscreen mode on double tap</string>
+    <string name="pref_double_tap_fullscreen_summ">Enable/disable fullscreen mode when double tap on a record text</string>
+    <string name="pref_quickly_node">Node for quick insertion</string>
+    <string name="pref_quickly_node_summ">The default node for records created using the widget or when sending data from third-party apps</string>
+
+    <string name="task_storage_loading">Storage loading…</string>
+    <string name="task_storage_decrypting">Storage decrypting…</string>
+    <string name="task_node_encrypting">Node encrypting…</string>
+    <string name="task_node_drop_crypting">Node drop encrypting…</string>
+    <string name="task_pass_changing">Password changing…</string>
+    <string name="task_attach_file">Uploading file to the storage…</string>
+    <string name="task_file_saving">File saving…</string>
+    <string name="stage_pass_checking">Password checking…</string>
+    <string name="stage_storage_decrypting">Storage decryption…</string>
+    <string name="stage_old_pass_decrypting">Storage decryption with old password…</string>
+    <string name="stage_new_pass_reencrypting">Storage re-encryption with new password…</string>
+    <string name="stage_storage_saving">Saving storage structure…</string>
+
+    <string name="filter_records_in_node_by_query">Filter records in node [%1$s] by query "%2$s"</string>
+    <string name="filter_records_in_tag_by_query">Filter records in tag records [%1$s] by query "%2$s"</string>
+    <string name="filter_files_by_query">Filter files in record [%1$s] by query "%2$s"</string>
+    <string name="filter_records_hint">Records filter</string>
+    <string name="filter_tags_by_query">Filter tags by query "%s"…</string>
+    <string name="search_text_by_query">Search text in record [%1$s] by query "%2$s"</string>
     <string name="search_hint_input_query">Enter query</string>
     <string name="search_search_in">Search in:</string>
     <string name="search_in_record_text">Record text</string>
@@ -129,27 +363,334 @@
     <string name="search_in_tags">Tags</string>
     <string name="search_in_nodes">Node name</string>
     <string name="search_in_file_names">File name</string>
+    <string name="search_in_ids">Node, record or file id</string>
     <string name="search_other_options">Other:</string>
-    <string name="found_mask">Found: %d</string>
-    <string name="records_search_select_tag">Select not an ampty tag or use the global search.</string>
-    <string name="global_search_not_found">No matches found for query \"%s\"..</string>
-    <string name="global_search_not_found_in_node">No matches found for query \"%s\" in node \"%s\"..</string>
-    <string name="show_node_records">Show node records</string>
-    <string name="pref_key_search_text" translatable="false">pref_key_search_text</string>
-    <string name="pref_key_search_records_names" translatable="false">pref_key_search_records_names</string>
-    <string name="pref_key_search_author" translatable="false">pref_key_search_author</string>
-    <string name="pref_key_search_url" translatable="false">pref_key_search_url</string>
-    <string name="pref_key_search_tags" translatable="false">pref_key_search_tags</string>
-    <string name="pref_key_search_nodes" translatable="false">pref_key_search_nodes</string>
-    <string name="pref_key_search_files" translatable="false">pref_key_search_files</string>
-    <string name="pref_key_search_split_to_words" translatable="false">pref_key_search_split_to_words</string>
-    <string name="pref_key_search_in_whole_words" translatable="false">pref_key_search_in_whole_words</string>
-    <string name="pref_key_search_in_cur_node" translatable="false">pref_key_search_in_cur_node</string>
+    <string name="search_records_select_tag">Select not an empty tag or use the global search.</string>
     <string name="search_submit_title">Start search</string>
-    <string name="pref_key_search_query" translatable="false">pref_key_search_query</string>
-    <string name="enter_query">Enter the search query</string>
+    <string name="search_text_hint">Search</string>
+    <string name="filter_nodes_by_query">Filter nodes by query "%s"…</string>
+    <string name="search_records_search_select_node">Select not an empty branch or use the global search.</string>
+    <string name="search_records_in_node_not_found_mask">No records found for query \"%1$s\" in node [%2$s]…</string>
+    <string name="search_records_in_tag_not_found_mak">No records found for query \"%1$s\" in tag [%2$s]…</string>
+    <string name="search_files_not_found_mask">No files found for query \"%s\"…</string>
+    <string name="search_nodes_not_found_mask">No nodes found for query \"%s\"…</string>
+    <string name="search_tags_not_found_mask">No tags found for query \"%s\"…</string>
+    <string name="search_found_mask">Found: %d</string>
+    <string name="search_tag_not_found_mask">Tag [%s] not found..</string>
+    <string name="global_search_not_found">No matches found for query \"%s\"…</string>
+    <string name="global_search_not_found_in_node">No matches found for query \"%1$s\" in node \"%2$s\"…</string>
     <string name="global_search_results">Search results</string>
-    <string name="global_search_return_null">Some error in global search..</string>
-    <string name="cur_node_is_not_selected">Current node is not selected</string>
-    <!--<string name="title_activity_found">Found</string>-->
+    <string name="global_search_in_cur_node">In current node</string>
+    <string name="global_search_start">Global search started by query \"%s\"</string>
+    <string name="global_search_end">Global search end. Found \"%d\" objects</string>
+    <string name="global_search_by_node_result">Search results by node \"%s\"</string>
+    <string name="global_searching">Global searching…</string>
+
+    <string name="label_name">Name:</string>
+    <string name="label_tags">Tags:</string>
+    <string name="label_author">Author:</string>
+    <string name="label_url">Url:</string>
+    <string name="label_created">Created:</string>
+    <string name="label_edited">Edited:</string>
+    <string name="label_text_edited">Text edited:</string>
+    <string name="label_pass">Password:</string>
+    <string name="label_cur_pass">Current password:</string>
+    <string name="label_new_pass">New password:</string>
+    <string name="label_confirm_pass">Confirm:</string>
+    <string name="label_crypted">Crypted:</string>
+    <string name="label_id" translatable="false">Id:</string>
+    <string name="label_path">Path to folder:</string>
+    <string name="label_file_size">File size:</string>
+    <string name="label_folder_size">Folder size:</string>
+    <string name="label_icons_section">Section:</string>
+    <string name="label_storage_path">Storage:</string>
+    <string name="label_storage_size">Size on disk:</string>
+    <string name="label_storage_last_edit">Last modified tree:</string>
+    <string name="label_node">Node:</string>
+    <string name="label_record">Record:</string>
+    <string name="label_parent_node">Parent node:</string>
+    <string name="label_favorite">Favorite</string>
+    <string name="label_pin_code_size">Value 4–8:</string>
+
+    <string name="stats_nodes_count">Nodes:</string>
+    <string name="stats_crypt_nodes_count">Of which is encrypted:</string>
+    <string name="stats_icons_count">Of them with icons:</string>
+    <string name="stats_max_subnodes">Maximum number of nodes:</string>
+    <string name="stats_max_depth">Maximum nesting depth:</string>
+    <string name="stats_records_count">Records:</string>
+    <string name="stats_crypt_records_count">Of which is encrypted:</string>
+    <string name="stats_files_count">Attached files:</string>
+    <string name="stats_tags_count">Tags:</string>
+    <string name="stats_unique_tags_count">Of which are unique:</string>
+    <string name="stats_authors_count">Authors:</string>
+
+    <string name="link_to_record">Link to MyTetroid record</string>
+    <string name="link_to_node">Link to MyTetroid node</string>
+    <string name="link_to_tag">Link to MyTetroid tag</string>
+
+    <string name="subtitle_tags">TAGS</string>
+    <string name="subtitle_nodes">NODES</string>
+    <string name="subtitle_record_view">VIEWER</string>
+    <string name="subtitle_record_edit">EDITOR</string>
+    <string name="subtitle_record_html">HTML</string>
+
+    <string name="ask_oper_without_record_dir_mask">Record directory is missing. %s anyway ?</string>
+    <string name="ask_attach_delete_without_file">File is missing on the disk. Delete anyway ?</string>
+    <string name="ask_delete_attach_without_file">File is missing on the disk. Delete file from storage ?</string>
+    <string name="ask_delete_record_without_dir">Record directory is missing. Delete record from storage ?</string>
+    <string name="ask_exit_from_app">Exit from app?</string>
+    <string name="ask_sync_success_dialog_request">Sync done. Reboot storage?</string>
+    <string name="ask_sync_failed_dialog_request">Sync failed. Download storage anyway?</string>
+    <string name="ask_save_record">Save record ?</string>
+    <string name="ask_node_delete_mask">Delete node \'%s\' ?</string>
+    <string name="ask_record_delete_mask">Delete record \'%s\' ?</string>
+    <string name="ask_file_delete_mask">Delete file \'%s\' ?</string>
+    <string name="ask_request_write_ext_storage">Permission to write to external memory is required to work with storage files. Provide ?</string>
+    <string name="ask_request_camera">Permission required to turn on the camera to capture an image. Provide ?</string>
+    <string name="ask_show_cur_session_logs">Show logs of the current application session that could not write to the log file ?</string>
+    <string name="ask_change_image_dimens">Resize images before inserting?</string>
+    <string name="ask_clear_trash">Cleat trash folder?</string>
+    <string name="ask_clear_search_history">Clear search history?</string>
+    <string name="ask_start_sync_dialog_title">Start storage sync?</string>
+    <string name="ask_load_all_nodes_dialog_title">To do thi, need to load all nodes. Proceed?</string>
+    <string name="ask_reload_storage">Reload storage from device memory?</string>
+    <string name="ask_storage_path_was_changed">Storage path was changed. Reload database?</string>
+<!--    <string name="ask_storage_folder_clear">The selected directory for the new vault will be cleared. Continue?</string>-->
+    <string name="ask_create_storage_in_folder">A new repository will be created in the selected directory. Continue?</string>
+    <string name="ask_clear_pass_database_ini">There are no encrypted nodes left. Clear encrypted password?</string>
+    <string name="ask_storage_changed_outside">The record tree has been modified by a third party program. Reboot the storage to continue working with the new data outside?</string>
+    <string name="ask_clear_saved_pass_hash">Clear saved password hash?</string>
+    <string name="ask_dir_not_empty">The selected directory is not empty. Continue anyway?</string>
+    <string name="ask_permission_termux">Permission to run Termux commands</string>
+    <string name="ask_load_storage">The storage is not loaded. Load?</string>
+    <string name="ask_load_all_nodes">You need to load all nodes of the storage. Load?</string>
+    <string name="ask_open_attaches">Open list of attached files ?</string>
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="full_date_format_string" translatable="false">dd.MM.yyyy HH:mm:ss</string>
+    <string name="def_date_format_string" translatable="false">dd MMM yyyy HH:mm</string>
+    <string name="hint_date_format_string">e.g. \"dd MMM yyyy HH:mm\"</string>
+
+    <string name="debug_not_implemented_yet">Not implemented yet..</string>
+<!--    <string name="details_in_logs">Details in the logs</string>-->
+
+    <string name="log_storage_changed_outside">The record tree has been modified by a third party program</string>
+    <string name="log_missing_read_ext_storage_permissions">Not enough permissions to access the external file storage</string>
+    <string name="log_missing_run_termux_commands_permissions">Not enough permissions to run Termux commands</string>
+    <string name="log_missing_write_ext_storage_permissions">Not enough permissions to write into the external file storage</string>
+    <string name="log_missing_camera_perm">Not enough permissions to camera</string>
+    <string name="log_empty_middle_hash_check_data_field">Missing password check information (field %s is empty in database.ini). Continue anyway with this password?</string>
+    <string name="log_wrong_saved_pass">Wrong saved pass (value does not match middle_hash_check_data)</string>
+    <string name="log_pass_is_incorrect">Password is incorrect</string>
+    <string name="log_cur_pass_is_incorrect">Current password is incorrect</string>
+    <string name="log_viewing_decrypted_not_possible">Viewing the encrypted file is not possible. Enable the option "Decrypt to a temporary directory"</string>
+    <string name="log_could_not_decrypt_file">Could not decrypt file&#160;</string>
+    <string name="log_could_not_create_temp_dir">Could not create temp directory&#160;</string>
+    <string name="log_file_decryption_error">File decryption error:&#160;</string>
+    <string name="log_storage_load_error">Storage loading error</string>
+    <string name="title_storage_not_loaded">Storage not loaded</string>
+<!--    <string name="log_errors_during_decryption">Errors occurred during decryption (more in logs)</string>-->
+    <string name="log_app_start_mask">Run app. Version %s</string>
+    <string name="log_storage_loaded_mask">Storage \'%s\' was loaded</string>
+    <string name="log_storage_loaded_decrypted_mask">Storage \'%s\' was loaded and decrypted</string>
+    <string name="log_storage_favor_loaded_mask">Storage \'%s\' favorites records was loaded</string>
+    <string name="log_show_pass_dialog"> Starting the password request dialog</string>
+    <string name="log_storage_settings_inited">Storage settings is loaded:&#160;</string>
+    <string name="log_tags_is_missing">Tags is missing</string>
+    <string name="log_global_search_return_null">Some error in global search…</string>
+    <string name="log_cur_node_is_not_selected">Current node is not selected.\nOnly search in the entire database is possible</string>
+    <string name="log_select_node_to_search">Select the node to search</string>
+    <string name="log_incorrect_dateformat_in_settings">The settings specified an incorrect date/time format for creating a record. The default format will be used.</string>
+    <string name="log_cur_record_is_not_set">Current record is not set</string>
+    <string name="log_no_app_found_for_open_file">No suitable application was found to open the file&#160;</string>
+    <string name="log_no_app_found_for_share_text">No suitable application was found to share the text</string>
+    <string name="log_error_file_open">File open error&#160;</string>
+    <string name="log_failed_storage_load">Failed to load storage:\n</string>
+    <string name="log_failed_storage_init">Failed to init storage:\n</string>
+    <string name="log_found_crypted_nodes">Encrypted nodes were found. To search for them, enter the password.</string>
+    <string name="log_missing_file_manager">File manager not found. Path to folder was copied to clipboard.</string>
+    <string name="log_error_read_record_file">Error reading record file:&#160;</string>
+    <string name="log_error_decrypt_record_file">Error decrypting record file:&#160;</string>
+    <string name="log_error_generate_record_file_path">Error generating the path to the record file:&#160;</string>
+    <string name="log_error_generate_record_folder_path">Error generating the path to the record folder:&#160;</string>
+    <string name="log_error_generate_file_path">Error generating the path to the attached file:&#160;</string>
+    <string name="log_error_add_record">Error add record to mytetra.xml</string>
+    <!--    <string name="log_error_create_record_folder">Error creating the record folder:&#160;</string>-->
+    <!--    <string name="log_error_del_record_dir">Error deleting the record folder:&#160;</string>-->
+    <!--    <string name="log_error_move_file_mask">Error moving file/folder from [%s] to [%s]</string>-->
+    <string name="log_error_copy_record_dir_mask">Error copying the record folder from [%1$s] to [%2$s]</string>
+    <string name="log_copy_record_dir_mask">Was copied the record folder to [%s]</string>
+    <string name="log_error_delete_file">Error deleting an attached file:&#160;</string>
+    <string name="log_file_is_missing">File is missing on the disk:&#160;</string>
+    <string name="log_open_node">Open node:&#160;</string>
+    <string name="log_sync_successful">Sync successful</string>
+    <string name="log_sync_failed">Failed to sync</string>
+    <string name="log_open_file">Open file:&#160;</string>
+    <string name="log_open_tag_records">Open tag records:&#160;</string>
+    <string name="log_start_storage_sync">Start storage sync. Command:&#160;</string>
+    <string name="log_get_file_size_error">Error getting file size:&#160;</string>
+    <string name="log_denied_read_file_access">Denied read access to the file:&#160;</string>
+    <string name="log_file_sharing_error">File sharing error:&#160;</string>
+    <string name="log_record_file_reading">Record file reading: id=</string>
+    <string name="log_error_record_reading">Record reading error</string>
+    <string name="log_not_found_child_in_viewflipper">Not found child in ViewFliper</string>
+    <string name="log_error_write_to_record_file">Error write to the record file:&#160;</string>
+    <string name="log_not_found_node_id">Not found node with id=</string>
+    <string name="log_not_found_record">Not found record with id=</string>
+    <string name="log_not_transferred_record_id">Record Id not passed</string>
+    <string name="log_editing_crypted_records">Editing encrypted records is not implemented yet..</string>
+    <string name="log_url_decode_error">Url decoding error:&#160;</string>
+    <string name="log_before_record_save">Saving record with id=</string>
+    <string name="log_wrong_tag_link_format">Wrong tag link format</string>
+    <string name="log_oper_start_mask">Start %1$s %2$s</string>
+    <string name="log_error_creating_record_file">Error creating record file</string>
+    <string name="log_saving_mytetra_xml">Saving file mytetra.xml</string>
+    <!--    <string name="log_failed_delete_file">Failed to deleting the file:&#160;</string>-->
+    <string name="log_record_not_have_node">The record does not have a node</string>
+    <string name="log_not_found_record_in_node">Not found record in node records</string>
+    <string name="log_oper_cancel_mask">Cancel %1$s %2$s, as failed to save mytetra.xml</string>
+    <string name="log_record_delete_absent_dir">Record deleting error: directory is absent&#160;</string>
+    <string name="log_oper_error_mask">Unable to %1$s the %2$s%3$s</string>
+<!--    <string name="log_during_oper_errors_mask">Errors occurred during %1$s the %2$s (more in the logs)</string>-->
+    <string name="log_during_oper_errors_mask">Errors occurred during %1$s the %2$s</string>
+    <string name="log_get_item_is_null">Unable to get current list item</string>
+    <string name="log_record_loading">Record loading id=</string>
+    <string name="log_node_delete_list_error">The node was deleted, but an error occurred while updating the list. Reboot storage</string>
+    <string name="log_node_move_list_error">The node was moved, but an error occurred while updating the list. Reboot storage</string>
+    <string name="log_create_node_list_error">The node was created, but an error occurred while updating the list. Reboot storage</string>
+    <string name="log_create_record_dir">Record directory \"%s\" is absent. Creating..</string>
+    <string name="log_create_record_dir_error">Record directory creating failed</string>
+    <string name="log_check_record_dir_error">Record directory checking failed</string>
+    <string name="log_link_to_obj_parsing_error">Failed to recognize the storage object by link</string>
+    <string name="log_file_is_absent">File is absent:</string>
+    <string name="log_file_checking_error">Error checking file existence:</string>
+    <!--    <string name="log_error_encrypt_file">Error copying and encrypting a file from [%s] to [%s]</string>-->
+    <!--    <string name="log_error_copy_file">Error copying a file from [%s] to [%s]</string>-->
+<!--    <string name="log_file_attaching_error">Unable to attach the file to the record (more in the logs)</string>-->
+    <string name="log_file_attaching_error">Unable to attach the file to the record</string>
+    <string name="log_file_was_attached">File was attached</string>
+    <string name="log_file_record_is_null" translatable="false">file.getRecord() is null</string>
+    <string name="log_record_not_have_attached_files">The record does not have attached files</string>
+    <string name="log_not_found_file_in_record">Not found file in the record</string>
+    <!--    <string name="log_rename_file_mask">File renaming to [%s]</string>-->
+    <!--    <string name="log_rename_file_error_mask">File renaming error from [%s] to [%s]</string>-->
+    <string name="log_record_file_is_missing">No recording file will be created when saving</string>
+    <string name="log_start_record_file_reading">Start reading a file of record id=</string>
+    <string name="log_start_record_file_saving">Start saving a file of record id=</string>
+    <string name="log_start_attach_file_opening">Start opening an attach file id=</string>
+    <string name="log_start_record_folder_opening">Start opening a record folder id=</string>
+    <string name="log_dir_creating_error">Unable to create directory to save log:&#160;</string>
+    <string name="log_created_log_dir">The log directory was created:&#160;</string>
+    <string name="log_file_read_error">Log file read error:&#160;</string>
+    <string name="log_logs_is_missing">Logs is missing</string>
+    <string name="log_selected_files_is_missing">Missing selected image files</string>
+    <string name="log_start_image_file_saving_mask">Start saving image [%1$s] to record id=%2$s</string>
+    <string name="log_start_image_file_converting_mask">Start converting image file to [%s]</string>
+    <string name="log_start_image_file_deleting_mask">Start deleting image file [%s]</string>
+    <string name="log_error_image_file_saving">Failed to save image file</string>
+<!--    <string name="log_failed_to_save_images_mask">Failed to save images: %d (more in the logs)</string>-->
+    <string name="log_failed_to_save_images_mask">Failed to save images: %d</string>
+<!--    <string name="log_failed_to_save_image">Failed to save image: %d</string>-->
+<!--    <string name="log_error_deleting_src_image_file">Failed to delete the source image file:&#160;</string>-->
+    <string name="log_error_deleting_src_image_file">Failed to delete the source image file:&#160;</string>
+<!--    <string name="log_error_record_file_decrypting">Failed to decrypt the record file (more in the logs)</string>-->
+    <string name="log_error_record_file_decrypting">Failed to decrypt the record file</string>
+    <string name="log_n_matches_found">%d matches found</string>
+    <string name="log_matches_not_found">Matches not found</string>
+    <string name="log_create_dir_error">Unable to create destination directory:&#160;</string>
+    <string name="log_error_move_record_catalog">Error moving record directory</string>
+<!--    <string name="log_erorr_move_record_dir_when_del">Record was deleted, but an error occurred while moving the directory to the trash (more in the logs)</string>-->
+    <string name="log_erorr_move_record_dir_when_del">Record was deleted, but an error occurred while moving the directory to the trash</string>
+    <string name="log_open_log_file">Reading the log file</string>
+    <string name="log_not_passed_text">Was not passed text</string>
+    <string name="log_not_passed_image_uri">Was not passed image URI</string>
+    <string name="log_receiving_intent_text">Receiving text from another application</string>
+    <string name="log_receiving_intent_image_mask">Receiving image from another application: [%s]</string>
+    <string name="log_receiving_intent_images_mask">Receiving images (%d) from another application</string>
+<!--    <string name="log_files_attach_error">Errors occurred while attaching file(s) (more in logs)</string>-->
+    <string name="log_files_attach_error">Errors occurred while attaching file(s)</string>
+    <string name="log_start_record_text_decrypting">Start decrypting the text of the record</string>
+    <string name="log_error_file_decrypt">Error decrypting file</string>
+    <string name="log_error_file_encrypt">Error encrypting file</string>
+    <string name="log_cannot_delete_root_node">Cannot delete a single root node</string>
+    <!--    <string name="log_file_moved_mask">File/folder was moved to %s</string>-->
+    <!--    <string name="log_file_moved_mask">File/folder was moved to %s</string>-->
+    <string name="log_start_pass_setup">Start setup the storage password</string>
+    <string name="log_pass_setted">Storage password was setup</string>
+    <string name="log_pass_set_error">Failed to set storage password</string>
+    <string name="log_start_pass_change">Start storage password changing</string>
+    <string name="log_pin_code_length_setup">PIN-code length was setup:&#160;</string>
+    <string name="log_pin_code_setup">PIN-code was setup</string>
+    <string name="log_pin_code_enter">PIN-code was enter</string>
+    <string name="log_pin_code_clean">PIN-code was clean</string>
+    <string name="log_pass_confirm_not_match">Password confirmation does not match</string>
+    <string name="log_pin_confirm_not_match">PIN-code confirmation does not match</string>
+    <string name="log_error_logs_reading_from_memory">Failed to read logs from memory</string>
+    <string name="log_pass_changed">Password was changed</string>
+<!--    <string name="log_pass_change_error">Errors occurred while changing password (more in logs)</string>-->
+    <string name="log_pass_change_error">Errors occurred while changing password</string>
+    <string name="log_mytetra_xml_was_saved">Storage structure saved in mytetra.xml</string>
+<!--    <string name="log_mytetra_xml_saving_error">Failed to save the storage structure in mytetra.xml (more in the logs)</string>-->
+    <string name="log_clear_storage_dir">Clear storage folder</string>
+    <string name="log_start_storage_creating">Start storage creating:\n</string>
+    <string name="log_dir_is_missing">Folder is missing</string>
+    <string name="log_no_nodes_in_storage">No nodes uploaded to storage</string>
+    <string name="log_app_exit">Exit from app</string>
+    <string name="log_obj_id_mask" translatable="false">id=%s</string>
+    <string name="log_obj_id_name_mask">id=%1$s, name=\"%2$s\"</string>
+    <string name="log_set_cur_pass">Setting current password</string>
+    <string name="log_set_new_pass">Setting the new password</string>
+    <string name="log_save_pass">Saving the password</string>
+    <string name="log_from_to_mask">&#160;from "%1$s" to "%2$s"</string>
+    <string name="log_to_mask">&#160; to "%s"</string>
+<!--    <string name="log_more_in_logs">&#160;(more in the logs)</string>-->
+    <string name="log_storage_decrypted">Storage was decrypted</string>
+    <string name="log_tag_is_null">Tag is empty (null)</string>
+    <string name="log_record_is_null">Record is empty (null)</string>
+    <string name="log_enter_pass_first">The node contains encrypted data. Enter password first</string>
+    <string name="log_attempt_save_empty_nodes">Empty nodes structure when saving mytetra.xml</string>
+    <string name="log_settings_copied_from_free">Application settings were copied from the Free version</string>
+    <string name="log_request_perm">Permission request:&#160;</string>
+    <string name="log_camera_perm_granted">Permission granted to use the camera</string>
+    <string name="log_write_ext_storage_perm_granted">Permission granted to write to the device’s external storage</string>
+    <string name="log_run_termux_commands_perm_granted">Permission granted to run Termux commands</string>
+    <string name="log_record_fields_changed">Record fields changed</string>
+    <string name="log_record_saved">Record saved</string>
+    <string name="log_record_node_is_empty">Record node is empty</string>
+    <string name="log_func_disabled">The functionality is disabled due to restrictions on its development</string>
+    <string name="log_storage_created">Storage was created</string>
+    <string name="log_sync_app_not_installed">MGit app is not installed</string>
+    <string name="log_review_request_not_succ" translatable="false">TetroidReview.showInAppReview(): request for review flow is not successful</string>
+    <string name="log_start_review" translatable="false">Start in-app review</string>
+    <string name="log_storage_need_load">Storage must be loaded</string>
+    <string name="log_all_nodes_need_load">All nodes of storage must be loaded</string>
+    <string name="log_dir_not_empty">Directory is not empty</string>
+    <string name="log_mOptionsMenu_is_null" translatable="false">TetroidActivity.updateOptionsMenu(): mOptionsMenu is null</string>
+    <string name="log_mytetra_xml_observer_mask">Track changes to a file mytetra.xml was %s</string>
+    <string name="log_sync_command_empty">Synchronisation command is not specified</string>
+    <string name="log_error_when_sync">An error occurred while trying to sync storage</string>
+    <string name="log_icons_dirs_absent">There are no catalogs with icons</string>
+    <string name="log_icons_dir_absent_mask">Directory with icons %s is missing</string>
+    <string name="log_error_download_web_page_mask">Error loading web-page content:\n%s</string>
+    <string name="log_error_download_file_mask">Error loading file:\n%s</string>
+    <string name="log_error_download_image_mask">Error loading image:\n%s</string>
+
+    <string name="title_insert_record_content">Insert record content</string>
+    <string name="title_insert_hyperlink">Insert hyperlink</string>
+    <string name="title_insert_url_as_text">Insert link as text</string>
+    <string name="title_attach_file">Attach file</string>
+    <string name="title_attach_image">Attach image</string>
+    <string name="title_insert_image">Attach image</string>
+    <string name="title_insert_web_page">Insert web page content</string>
+    <string name="title_insert_web_page_as_text">Insert web page as text</string>
+    <string name="title_attach_web_page_as_file">Attach web page as file</string>
+    <string name="title_download_attach_file">Download and attach file</string>
+    <string name="title_download_attach_image">Download and attach image</string>
+    <string name="title_download_insert_image">Download and insert image</string>
+    <string name="title_insert_as">Insert as..</string>
+    <string name="title_file_downloading">File downloading</string>
+    <string name="title_download_by_link">DOWNLOAD BY LINK</string>
+    <string name="title_select_on_device">SELECT ON DEVICE</string>
+    <string name="log_link_is_empty">Link is empty</string>
 </resources>

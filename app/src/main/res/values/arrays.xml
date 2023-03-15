@@ -1,16 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="sync_apps">
+        <item>@string/title_app_mgit</item>
+        <item>@string/title_app_termux</item>
+    </string-array>
     <string-array name="when_ask_password_entries">
         <item>@string/pref_when_ask_password_on_select</item>
         <item>@string/pref_when_ask_password_on_start</item>
     </string-array>
+    <string-array name="show_record_fields_entries">
+        <item>@string/pref_show_record_fields_yes</item>
+        <item>@string/pref_show_record_fields_no</item>
+        <item>@string/pref_show_record_fields_filled</item>
+    </string-array>
+    <string-array name="record_fields_in_list_entries">
+        <item>@string/title_author</item>
+        <item>@string/title_tags</item>
+        <item>@string/title_created</item>
+    </string-array>
+    <string-array name="record_fields_in_list_entries_pro">
+        <item>@string/title_author</item>
+        <item>@string/title_tags</item>
+        <item>@string/title_created</item>
+        <item>@string/title_edited</item>
+    </string-array>
+    <string-array name="record_fields_in_list_def_entries">
+        <item>@string/title_tags</item>
+        <item>@string/title_created</item>
+    </string-array>
     <string-array name="view_type_titles">
         <!--<item name="none"> </item>-->
         <item name="records_list">NODE</item>
-        <item name="record_text">RECORD</item>
-        <item name="recor_files">FILES</item>
+<!--        <item name="record_text">RECORD</item>-->
+        <item name="record_files">FILES</item>
         <item name="tag_records">TAG</item>
-        <item name="finded_records">SEARCH RECORDS</item>
+        <item name="founded_records"></item>
+        <!--<item name="finded_records">SEARCH RECORDS</item>-->
     </string-array>
     <string-array name="search_split_to_words">
         <item name="search_any_word">Any word</item>
@@ -22,15 +47,206 @@
     </string-array>
     <string-array name="search_in_cur_node">
         <item name="search_all_database">Search all database</item>
-        <item name="search_cur_node">In current node</item>
+        <item>@string/global_search_in_cur_node</item>
+        <item name="global_search_in_spec_node">In specified node</item>
     </string-array>
     <string-array name="found_types">
-        <item>Record name</item>
-        <item>Record text</item>
-        <item>Author</item>
-        <item>Url</item>
-        <item>File</item>
-        <item>Tag</item>
-        <item>Node</item>
+        <item>record name</item>
+        <item>text</item>
+        <item>author</item>
+        <item>url</item>
+        <item>file name</item>
+        <item>tag</item>
+        <item>node name</item>
+        <item>node id</item>
+        <item>record id</item>
+        <item>file id</item>
+    </string-array>
+    <string-array name="clipboard_simple_url">
+        <item>@string/title_insert_hyperlink</item>
+        <item>@string/title_insert_url_as_text</item>
+    </string-array>
+    <string-array name="clipboard_url">
+        <item>@string/title_insert_web_page</item>
+        <item>@string/title_insert_web_page_as_text</item>
+        <item>@string/title_attach_web_page_as_file</item>
+        <item>@string/title_insert_hyperlink</item>
+        <item>@string/title_insert_url_as_text</item>
+    </string-array>
+    <string-array name="clipboard_local_file">
+        <item>@string/title_attach_file</item>
+        <item>@string/title_insert_hyperlink</item>
+        <item>@string/title_insert_url_as_text</item>
+    </string-array>
+    <string-array name="clipboard_web_file">
+        <item>@string/title_download_attach_file</item>
+        <item>@string/title_insert_hyperlink</item>
+        <item>@string/title_insert_url_as_text</item>
+    </string-array>
+    <string-array name="clipboard_local_image">
+        <item>@string/title_insert_image</item>
+        <item>@string/title_attach_image</item>
+        <item>@string/title_insert_hyperlink</item>
+        <item>@string/title_insert_url_as_text</item>
+    </string-array>
+    <string-array name="clipboard_web_image">
+        <item>@string/title_download_insert_image</item>
+        <item>@string/title_download_attach_image</item>
+        <item>@string/title_insert_hyperlink</item>
+        <item>@string/title_insert_url_as_text</item>
+    </string-array>
+    <string-array name="clipboard_tetroid_record">
+<!--        TODO:-->
+<!--        <item>@string/title_insert_record_content</item>-->
+        <item>@string/title_insert_hyperlink</item>
+        <item>@string/title_insert_url_as_text</item>
+    </string-array>
+    <string-array name="clipboard_tetroid_file">
+<!--        TODO:-->
+<!--        <item>@string/title_attach_file</item>-->
+        <item>@string/title_insert_hyperlink</item>
+        <item>@string/title_insert_url_as_text</item>
+    </string-array>
+
+    <string-array name="obj_storage">
+        <item>storage</item>
+        <item>Storage was&#160;</item>
+        <item>storage</item>
+    </string-array>
+    <string-array name="obj_node">
+        <item>node</item>
+        <item>Node was&#160;</item>
+        <item>node</item>
+    </string-array>
+    <string-array name="obj_node_fields">
+        <item>node fields</item>
+        <item>Node fields was&#160;</item>
+        <item>node fields</item>
+    </string-array>
+    <string-array name="obj_record">
+        <item>record</item>
+        <item>Record was&#160;</item>
+        <item>record</item>
+    </string-array>
+    <string-array name="obj_temp_record">
+        <item>temp record</item>
+        <item>Temp record was&#160;</item>
+        <item>temp record</item>
+    </string-array>
+    <string-array name="obj_record_fields">
+        <item>record fields</item>
+        <item>Record fields was&#160;</item>
+        <item>record fields</item>
+    </string-array>
+    <string-array name="obj_record_dir">
+        <item>record catalog</item>
+        <item>Record catalog was&#160;</item>
+        <item>record catalog</item>
+    </string-array>
+    <string-array name="obj_tag">
+        <item>record tag</item>
+        <item>Record tag was&#160;</item>
+        <item>record tag</item>
+    </string-array>
+    <string-array name="obj_file">
+        <item>file</item>
+        <item>File was&#160;</item>
+        <item>file</item>
+    </string-array>
+    <string-array name="obj_image">
+        <item>image</item>
+        <item>Image was&#160;</item>
+        <item>image</item>
+    </string-array>
+    <string-array name="obj_file_fields">
+        <item>file fields</item>
+        <item>File fields was&#160;</item>
+        <item>file fields</item>
+    </string-array>
+
+    <string-array name="oper_set">
+        <item>set</item>
+        <item>setted</item>
+        <item>setting</item>
+    </string-array>
+    <string-array name="oper_load">
+        <item>load</item>
+        <item>loaded</item>
+        <item>loading</item>
+    </string-array>
+    <string-array name="oper_create">
+        <item>create</item>
+        <item>created</item>
+        <item>creating</item>
+    </string-array>
+    <string-array name="oper_add">
+        <item>add</item>
+        <item>added</item>
+        <item>adding</item>
+    </string-array>
+    <string-array name="oper_change">
+        <item>change</item>
+        <item>changed</item>
+        <item>changing</item>
+    </string-array>
+    <string-array name="oper_rename">
+        <item>rename</item>
+        <item>renamed</item>
+        <item>renaming</item>
+    </string-array>
+    <string-array name="oper_delete">
+        <item>delete</item>
+        <item>deleted</item>
+        <item>deleting</item>
+    </string-array>
+    <string-array name="oper_copy">
+        <item>copy</item>
+        <item>copied</item>
+        <item>copying</item>
+    </string-array>
+    <string-array name="oper_cut">
+        <item>cut</item>
+        <item>cutted</item>
+        <item>cutting</item>
+    </string-array>
+    <string-array name="oper_insert">
+        <item>insert</item>
+        <item>inserted</item>
+        <item>inserting</item>
+    </string-array>
+    <string-array name="oper_move">
+        <item>move</item>
+        <item>moved</item>
+        <item>moving</item>
+    </string-array>
+    <string-array name="oper_save">
+        <item>save</item>
+        <item>saved</item>
+        <item>saving</item>
+    </string-array>
+    <string-array name="oper_attach">
+        <item>attach</item>
+        <item>attached</item>
+        <item>attaching</item>
+    </string-array>
+    <string-array name="oper_encrypt">
+        <item>encrypt</item>
+        <item>encrypted</item>
+        <item>encrypting</item>
+    </string-array>
+    <string-array name="oper_decrypt">
+        <item>decrypt</item>
+        <item>decrypted</item>
+        <item>decrypting</item>
+    </string-array>
+    <string-array name="oper_dropcrypt">
+        <item>drop encryption</item>
+        <item>encryption dropped</item>
+        <item>dropping encryption</item>
+    </string-array>
+    <string-array name="oper_reencrypt">
+        <item>re-encrypt</item>
+        <item>re-encrypted</item>
+        <item>re-encrypting</item>
     </string-array>
 </resources>

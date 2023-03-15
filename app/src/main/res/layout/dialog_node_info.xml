@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:columnCount="2"
+    android:rowCount="4"
+    android:shrinkColumns="1"
+    android:padding="16dp">
+
+    <TableRow>
+        <TextView
+            android:text="@string/label_id"
+            style="@style/grid_cell_label"/>
+
+        <TextView
+            android:id="@+id/text_view_id"
+            style="@style/grid_cell_value"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="@string/label_crypted"
+            style="@style/grid_cell_label"/>
+
+        <TextView
+            android:id="@+id/text_view_crypted"
+            style="@style/grid_cell_value"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="@string/stats_nodes_count"
+            style="@style/grid_cell_label"/>
+
+        <TextView
+            android:id="@+id/text_view_nodes"
+            style="@style/grid_cell_value"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="@string/stats_records_count"
+            style="@style/grid_cell_label"/>
+
+        <TextView
+            android:id="@+id/text_view_records"
+            style="@style/grid_cell_value"/>
+    </TableRow>
+
+</TableLayout>

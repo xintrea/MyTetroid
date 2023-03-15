@@ -1,22 +1,23 @@
 package com.gee12.mytetroid.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.Html;
-import android.text.method.LinkMovementMethod;
-import android.view.View;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.gee12.mytetroid.LogManager;
-import com.gee12.mytetroid.R;
-import com.gee12.mytetroid.Utils;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import com.gee12.mytetroid.R;
+import com.gee12.mytetroid.logs.LogManager;
+import com.gee12.mytetroid.utils.Utils;
+
+/**
+ * Активность для просмотра информации о приложении.
+ */
 public class AboutActivity extends AppCompatActivity {
 
     @Override
@@ -27,24 +28,11 @@ public class AboutActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        TextView tvVesion = findViewById(R.id.text_view_version);
-        tvVesion.setText(Utils.getVersionName(this));
-
-        TextView tvappSumm = findViewById(R.id.text_view_app_summ);
-        tvappSumm.setText(Html.fromHtml(getString(R.string.app_summ_html)));
-        tvappSumm.setMovementMethod(LinkMovementMethod.getInstance());
-
-        TextView tvUrl = findViewById(R.id.text_view_url);
-        tvUrl.setText(Html.fromHtml(getString(R.string.project_url)));
-        tvUrl.setMovementMethod(LinkMovementMethod.getInstance());
+        TextView tvVersion = findViewById(R.id.text_view_version);
+        tvVersion.setText(Utils.getVersionName(this));
 
         Button bRateApp = findViewById(R.id.button_rate_app);
-        bRateApp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rateApp();
-            }
-        });
+        bRateApp.setOnClickListener(v -> rateApp());
     }
 
     void rateApp() {
@@ -58,9 +46,20 @@ public class AboutActivity extends AppCompatActivity {
         try {
             startActivity(goToMarket);
         } catch (ActivityNotFoundException e) {
-            LogManager.addLog(e);
+            LogManager.log(this, e);
             startActivity(new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
+                    Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName())));
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

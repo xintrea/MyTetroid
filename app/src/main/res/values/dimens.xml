@@ -1,14 +1,15 @@
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="nav_header_vertical_spacing">0dp</dimen>
     <dimen name="nav_header_height">72dp</dimen>
-    <dimen name="fab_margin">0dp</dimen>
+    <dimen name="fab_margin">12dp</dimen>
+    <dimen name="fab_small_margin">8dp</dimen>
 
     <dimen name="font_default">18sp</dimen>
     <dimen name="font_big">22sp</dimen>
     <dimen name="font_small">14sp</dimen>
+    <dimen name="font_small_small">12sp</dimen>
     <dimen name="font_app_title">20sp</dimen>
     <dimen name="offset_default">3dp</dimen>
     <dimen name="padding_default">12dp</dimen>
@@ -26,4 +27,13 @@
     <dimen name="checkbox_vert_padding">2dp</dimen>
     <dimen name="spinner_vert_padding">8dp</dimen>
     <dimen name="nav_view_headers_text_size">18sp</dimen>
+    <dimen name="stats_labels_width">200dp</dimen>
+
+    <!--Refer to App Widget Documentation for margin information
+    http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout-->
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="widget_image_dimens">40dp</dimen>
+    <dimen name="widget_text_padding_top">0dp</dimen>
+    <dimen name="widget_line_height">9dp</dimen>
+    <dimen name="widget_line_spacing">-3sp</dimen>
 </resources>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".activities.RecordActivity">
+
+    <include
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/layout_fields_expander"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            app:el_duration="300"
+            app:el_expanded="false"
+            app:el_parallax="0.5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark"
+                android:background="@drawable/side_nav_bar"
+                android:textColor="@color/colorMoreLightText">
+
+                <TextView
+                    android:id="@+id/label_record_tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:text="@string/label_tags"
+                    android:textColor="@color/colorLightLabelText"/>
+
+                <TextView
+                    android:id="@+id/text_view_record_tags"
+                    android:layout_toRightOf="@id/label_record_tags"
+                    android:layout_toEndOf="@id/label_record_tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:textColor="@color/colorLightLabelText"
+                    android:textColorLink="@color/colorBlueDark"/>
+
+                <TextView
+                    android:id="@+id/label_record_author"
+                    android:layout_below="@id/text_view_record_tags"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/label_author"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/colorLightLabelText" />
+
+                <TextView
+                    android:id="@+id/text_view_record_author"
+                    android:layout_below="@id/text_view_record_tags"
+                    android:layout_toRightOf="@id/label_record_author"
+                    android:layout_toEndOf="@id/label_record_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_author"
+                    android:padding="2dp" />
+
+                <TextView
+                    android:id="@+id/label_record_url"
+                    android:layout_below="@id/text_view_record_author"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/label_url"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/colorLightLabelText" />
+
+                <TextView
+                    android:id="@+id/text_view_record_url"
+                    android:layout_below="@id/text_view_record_author"
+                    android:layout_toRightOf="@id/label_record_url"
+                    android:layout_toEndOf="@id/label_record_url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:autoLink="web"
+                    android:textColorLink="@color/colorBlueDark"
+                    android:padding="2dp"/>
+
+                <TextView
+                    android:id="@+id/label_record_created"
+                    android:layout_below="@id/text_view_record_url"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/label_created"
+                    android:textColor="@color/colorLightLabelText" />
+
+                <TextView
+                    android:id="@+id/text_view_record_created"
+                    android:layout_below="@id/text_view_record_url"
+                    android:layout_toRightOf="@id/label_record_created"
+                    android:layout_toEndOf="@id/label_record_created"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="0dp" />
+
+                <TextView
+                    android:id="@+id/label_record_edited"
+                    android:layout_below="@id/text_view_record_created"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/label_text_edited"
+                    android:textColor="@color/colorLightLabelText"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/text_view_record_edited"
+                    android:layout_below="@id/text_view_record_created"
+                    android:layout_toRightOf="@id/label_record_edited"
+                    android:layout_toEndOf="@id/label_record_edited"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="0dp"
+                    android:visibility="gone" />
+
+                <!--<ImageButton
+                    android:id="@+id/button_edit_fields"
+                    android:layout_below="@id/text_view_record_url"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="0dp"
+                    android:src="@drawable/ic_edit_fields"
+                    android:alpha="0.8"
+                    android:background="@android:color/transparent"
+                    />-->
+
+            </RelativeLayout>
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+        <com.gee12.mytetroid.views.TetroidEditor
+            android:id="@+id/html_editor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout_fields_expander"
+            android:background="@android:color/transparent"/>
+
+        <ScrollView
+            android:id="@+id/scroll_html"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
+
+            <com.gee12.mytetroid.views.TetroidEditText
+                android:id="@+id/edit_text_html"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:scrollbars="vertical"
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:textSize="14sp"
+                android:background="@null"
+                />
+
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:visibility="gone"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_find_prev"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentRight="false"
+            android:layout_toLeftOf="@id/button_find_next"
+            android:src="@drawable/ic_arrow_prev_white"
+            app:backgroundTint="@color/colorGray_50"
+            android:visibility="gone"
+            style="@style/fab"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_find_next"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentRight="false"
+            android:layout_toLeftOf="@id/button_toggle_fields"
+            android:src="@drawable/ic_arrow_next_white"
+            app:backgroundTint="@color/colorGray_50"
+            android:visibility="gone"
+            style="@style/fab"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_toggle_fields"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="false"
+            android:src="@drawable/ic_arrow_drop_down_white"
+            app:backgroundTint="@color/colorAccent_50"
+            style="@style/fab"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_fullscreen"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="false"
+            android:src="@drawable/ic_fullscreen"
+            app:backgroundTint="@color/fab"
+            android:visibility="gone"
+            style="@style/fab" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_scroll_top"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@id/button_toggle_fields"
+            android:src="@drawable/ic_arrow_up_white"
+            app:backgroundTint="@color/fab"
+            android:visibility="gone"
+            style="@style/fab"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_scroll_bottom"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_arrow_down_white"
+            app:backgroundTint="@color/fab"
+            android:visibility="gone"
+            style="@style/fab"/>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/layout_progress_bar"
+        layout="@layout/layout_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

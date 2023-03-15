@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_open_tag"
+        android:orderInCategory="10"
+        android:title="@string/title_open_tag_records"
+        android:icon="@drawable/ic_tag"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_rename"
+        android:orderInCategory="20"
+        android:title="@string/title_rename"
+        android:icon="@drawable/ic_edit"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/action_copy_link"
+        android:orderInCategory="30"
+        android:title="@string/title_copy_link"
+        android:icon="@drawable/ic_link"
+        app:showAsAction="ifRoom|withText" />
+</menu>

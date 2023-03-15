@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_open_node"
+        android:orderInCategory="10"
+        android:title="@string/title_show_node"
+        android:icon="@drawable/ic_open_node" />
+    <item
+        android:id="@+id/action_create_subnode"
+        android:orderInCategory="20"
+        android:title="@string/title_create_subnode"
+        android:icon="@drawable/ic_create_node" />
+    <item
+        android:id="@+id/action_create_node"
+        android:orderInCategory="20"
+        android:title="@string/title_create_node"
+        android:icon="@drawable/ic_create_node" />
+    <item
+        android:id="@+id/action_rename"
+        android:orderInCategory="30"
+        android:title="@string/title_rename"
+        android:icon="@drawable/ic_edit" />
+    <item
+        android:id="@+id/action_node_icon"
+        android:orderInCategory="40"
+        android:title="@string/title_set_node_icon"
+        android:icon="@drawable/ic_node_icon" />
+    <item
+        android:id="@+id/action_copy_link"
+        android:orderInCategory="50"
+        android:title="@string/title_copy_link"
+        android:icon="@drawable/ic_link" />
+    <item
+        android:id="@+id/action_expand_node"
+        android:orderInCategory="80"
+        android:title="@string/title_expand_node_subnodes"
+        android:icon="@drawable/ic_arrow_expand" />
+    <item
+        android:id="@+id/action_collapse_node"
+        android:orderInCategory="90"
+        android:title="@string/title_collapse_node_subnodes"
+        android:icon="@drawable/ic_arrow_collapse"
+        android:visible="false" />
+    <item
+        android:id="@+id/action_move_up"
+        android:orderInCategory="100"
+        android:title="@string/title_move_up"
+        android:icon="@drawable/ic_move_up" />
+    <item
+        android:id="@+id/action_move_down"
+        android:orderInCategory="110"
+        android:title="@string/title_move_down"
+        android:icon="@drawable/ic_move_down" />
+    <item
+        android:id="@+id/action_copy"
+        android:orderInCategory="120"
+        android:title="@string/title_copy"
+        android:icon="@drawable/ic_copy" />
+    <item
+        android:id="@+id/action_cut"
+        android:orderInCategory="121"
+        android:title="@string/title_cut"
+        android:icon="@drawable/ic_cut" />
+    <item
+        android:id="@+id/action_insert"
+        android:orderInCategory="122"
+        android:title="@string/title_insert_beside"
+        android:icon="@drawable/ic_insert" />
+    <item
+        android:id="@+id/action_insert_subnode"
+        android:orderInCategory="123"
+        android:title="@string/title_insert_subnode"
+        android:icon="@drawable/ic_insert" />
+    <item
+        android:id="@+id/action_encrypt_node"
+        android:orderInCategory="130"
+        android:title="@string/title_encrypt_node"
+        android:icon="@drawable/ic_encrypt" />
+    <item
+        android:id="@+id/action_no_encrypt_node"
+        android:orderInCategory="140"
+        android:title="@string/title_decrypt_node"
+        android:icon="@drawable/ic_no_encrypt" />
+    <item
+        android:id="@+id/action_info"
+        android:orderInCategory="150"
+        android:title="@string/title_node_info"
+        android:icon="@drawable/ic_info"/>
+    <item
+        android:id="@+id/action_delete"
+        android:orderInCategory="160"
+        android:title="@string/title_delete"
+        android:icon="@drawable/ic_delete" />
+</menu>
